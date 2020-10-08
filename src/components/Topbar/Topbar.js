@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'clsx'
-import profileImg from '../../images/profile-image.jpg'
+// import profileImg from '../../images/profile-image.jpg'
 import classes from './Topbar.module.css'
 
 const Topbar = React.forwardRef(function Topbar(props, ref) {
@@ -10,7 +10,11 @@ const Topbar = React.forwardRef(function Topbar(props, ref) {
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
       <main className={classes.main}>
-        <image className={classes.profileImage} src={profileImg} alt="profile picture" />
+        <img
+          className={classes.profileImage}
+          src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/b7/b75bbc8332fc6b80b85b31f8a617fdc5bfa9d6e4_full.jpg"
+          alt="profile"
+        />
 
         <div className={classes.userContainer}>
           <h4 className={classes.userName}>Cyndraz</h4>

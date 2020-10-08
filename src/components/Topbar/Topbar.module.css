@@ -1,12 +1,28 @@
 .main {
   background: linear-gradient(90deg, rgba(42, 71, 94, 1) 0%, rgba(27, 40, 56, 1) 65%);
   height: 5.2rem;
+  display: flex;
 }
+
+.profileImage {
+  width: 60px;
+  height: 60px;
+  padding: 8px;
+}
+
+.userContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 28px;
+  font-size: 18px;
+}
+
 .userName {
   margin: 0;
   color: #66c0f4;
 }
 
 .userStatus {
+  margin: 0;
   color: #66c0f4;
 }
