@@ -1,0 +1,30 @@
+.root {
+  height: 32px;
+  background-color: #686a76;
+  display: flex;
+}
+
+.searchLabel {
+  align-self: center;
+  color: gainsboro;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.searchInput {
+  width: 80%;
+  opacity: 0;
+  transition: 0.5s;
+  background-color: #686a76;
+  border: none;
+}
+
+.searchInput:hover {
+  opacity: 1;
+  background-color: #373a40;
+}
+
+.searchInput:active,
+input:focus {
+  outline: none;
+}
