@@ -1,13 +1,19 @@
 import React from 'react'
 import Topbar from 'components/Topbar/Topbar'
-import './App.css'
+import Search from 'components/Search/Search'
+import Online from 'Online/Online'
+import classes from 'App.module.css'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Topbar />
-      </header>
+      <Topbar />
+      <Search />
+      <hr className={classes.split} />
+      <Online />
+      <h2>Test</h2>
+      <h2>Test</h2>
+      <h2>Test</h2>
     </div>
   )
 }
