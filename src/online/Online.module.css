@@ -1,18 +1,29 @@
 .root {
   display: flex;
+  height: 50px;
+  align-items: center;
+  padding-left: 20px;
 }
 
 .friendContainer {
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 0;
 }
 
 .friendImage {
   height: 35px;
+  padding-right: 10px;
+}
+
+.friendName {
+  margin: 0;
+  font-size: 15px;
+  color: lightgreen;
 }
 
 .friendPlaying {
   margin: 0;
+  font-size: 10px;
+  color: #7da10e;
 }
