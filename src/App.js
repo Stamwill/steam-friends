@@ -1,11 +1,12 @@
 import React from 'react'
+import FriendsList from 'components/FriendsList/FriendsList'
 import * as api from 'api/mock'
 import Topbar from 'components/Topbar/Topbar'
 import Search from 'components/Search/Search'
-import Online from 'Online/Online'
 import OnlineFriends from 'OnlineFriends/OnlineFriends'
 import classes from 'App.module.css'
-
+import OfflineFriends from './OfflineFriends/OfflineFriends'
+import OfflineList from './OfflineList/OfflineList'
 
 function App() {
   return (
@@ -13,9 +14,11 @@ function App() {
       <Topbar />
       <Search />
       <hr className={classes.split} />
-      <OnlineFriends />
-      <Online friends={api.friends}/>
-
+      <OnlineFriends friends={api.friends}/>
+      <FriendsList friends={api.friends} />
+      <hr className={classes.onlineSplit} />
+      <OfflineFriends />
+      <OfflineList offlines={api.offline} />
     </div>
   )
 }
