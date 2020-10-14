@@ -98,4 +98,15 @@ export const friends = [
   },
 ]
 
-export default friends
+export const offline = [
+  {
+    userName: "maeertin",
+    userStatus: "Offline",
+  },
+  {
+    userName: "Peter",
+    userStatus: "Offline",
+  }
+]
+
+// export default { friends, offline }
