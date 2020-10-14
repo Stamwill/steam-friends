@@ -1,7 +1,6 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'clsx'
- import { userType } from 'utils'
 import FriendsList from '../components/FriendsList/FriendsList'
 import classes from './Online.module.css'
 
@@ -21,7 +20,7 @@ const Online = React.forwardRef(function Online(props, ref) {
 })
 
 Online.propTypes = {
-  friends: PropTypes.arrayOf(userType),
+  friends: PropTypes.array.isRequired,
   className: PropTypes.string,
 
 }
