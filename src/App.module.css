@@ -5,3 +5,11 @@
   opacity: 0.3;
   background-color: #686d76;
 }
+
+.onlineSplit {
+  height: 1px;
+  border: none;
+  margin-top: 1rem;
+  opacity: 0.3;
+  background-color: #fff;
+}
