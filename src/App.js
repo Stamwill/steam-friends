@@ -15,7 +15,6 @@ function App() {
       <hr className={classes.split} />
       <OnlineFriends />
       <Online friends={api.friends}/>
-      {/* <FriendsList friends={api.friends}/> */}
 
     </div>
   )
