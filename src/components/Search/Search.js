@@ -4,7 +4,7 @@ import classnames from 'clsx'
 import classes from './Search.module.css'
 
 const Search = React.forwardRef(function Search(props, ref) {
-  const { children, className, ...other } = props
+  const {  className, ...other } = props
 
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
@@ -17,7 +17,6 @@ const Search = React.forwardRef(function Search(props, ref) {
 })
 
 Search.propTypes = {
-  children: PropTypes.node.isRequired,
   className: PropTypes.string,
 }
 
