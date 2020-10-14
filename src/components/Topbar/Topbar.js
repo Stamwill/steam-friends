@@ -4,7 +4,7 @@ import classnames from 'clsx'
 import classes from './Topbar.module.css'
 
 const Topbar = React.forwardRef(function Topbar(props, ref) {
-  const { children, className, ...other } = props
+  const { className, ...other } = props
 
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
@@ -26,7 +26,6 @@ const Topbar = React.forwardRef(function Topbar(props, ref) {
 })
 
 Topbar.propTypes = {
-  children: PropTypes.node.isRequired,
   className: PropTypes.string,
 }
 
