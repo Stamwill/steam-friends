@@ -1,0 +1,32 @@
+.root {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0 0.2rem 1.8rem;
+  width: 98vw;
+}
+
+.root:hover {
+  background-color: rgba(102, 192, 244, 0.1);
+}
+
+.userImg {
+  padding-right: 1rem;
+}
+
+.userContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.userName {
+  color: gray;
+  margin: 0;
+}
+
+.userStatus {
+  color: gray;
+  margin: 0;
+  margin-bottom: 5px;
+}
