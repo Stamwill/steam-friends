@@ -1,36 +1,32 @@
 .root {
   display: flex;
   align-items: center;
-  padding-left: 20px;
+  padding: 0.3rem 0 0.2rem 0.5rem;
+  width: 98vw;
 }
-/* 
-.friendContainer {
+
+.root:hover {
+  background-color: rgba(102, 192, 244, 0.1);
+}
+
+.userImg {
+  padding-right: 1rem;
+}
+
+.userContainer {
   display: flex;
   flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.userName {
+  color: #66c0f4;
   margin: 0;
 }
 
-.friendImage {
-  height: 35px;
-  padding-right: 10px;
-}
-
-.friendName {
+.userStatus {
+  color: #66c0f4;
   margin: 0;
-  font-size: 15px;
-  color: lightgreen;
-}
-
-.friendPlaying {
-  margin: 0;
-  font-size: 10px;
-  color: #7da10e;
-} */
-
-.onlineHr {
-  height: 1px;
-  border: none;
-  margin-top: 4px;
-  opacity: 0.3;
-  background-color: #fff;
+  margin-bottom: 5px;
 }
