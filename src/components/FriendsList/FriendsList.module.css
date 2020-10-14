@@ -1,0 +1,27 @@
+.root {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.userImg {
+  padding-right: 1rem;
+}
+
+.userContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.userName {
+  color: white;
+  margin: 0;
+}
+
+.userStatus {
+  color: white;
+  margin: 0;
+  margin-bottom: 5px;
+}
