@@ -14,7 +14,7 @@ const Online = React.forwardRef(function Online(props, ref) {
       </a>
 
       <div className={classes.userContainer}>
-        <h4 className={classes.userName}>{friends.userName}</h4>
+        <h4 className={classes.userName}>{friends.userName} <span className={classes.userArrow}>&or;</span></h4>
 
         <h5 className={classes.userStatus}> {friends.userStatus} </h5>
       </div>
