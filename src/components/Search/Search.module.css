@@ -13,10 +13,13 @@
 
 .searchInput {
   width: 80%;
+  height: 80%;
+  align-self: center;
   opacity: 0;
   transition: 0.5s;
   background-color: #686a76;
   border: none;
+  border-radius: 2px;
 }
 
 .searchInput:hover {
