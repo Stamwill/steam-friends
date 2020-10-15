@@ -86,16 +86,31 @@
 //   ],
 // }
 
+export const playing = [
+  {
+    userName: "Polarsaurus",
+    gamePlayed: "Borderlands 3"
+  }
+]
+
 export const friends = [
 
   {
-    userName: "Charlie",
+    userName: "Polarsaurus",
     userStatus: "Online",
   },
   {
-    userName: "will",
+    userName: "Cyndraz",
     userStatus: "Online",
   },
+  {
+    userName: "Roger Moo",
+    userStatus: "Online",
+  },
+  {
+    userName: "npahlfer",
+    userStatus: "Online",
+  }
 ]
 
 export const offline = [
