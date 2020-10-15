@@ -16,10 +16,11 @@ const Topbar = React.forwardRef(function Topbar(props, ref) {
         />
 
         <div className={classes.userContainer}>
-          <h4 className={classes.userName}>Cyndraz</h4>
+          <h4 className={classes.userName}>Cyndraz  <span className={classes.userArrow}>&or;</span></h4>
 
           <h5 className={classes.userStatus}>Online</h5>
         </div>
+
       </main>
     </div>
   )
