@@ -13,6 +13,18 @@
   padding-right: 1rem;
 }
 
+.userArrow {
+  opacity: 0;
+  padding-left: 5px;
+  font-size: 0.8rem;
+  color: rgba(49, 53, 56, 1);
+  cursor: pointer;
+}
+
+.root:hover .userArrow {
+  opacity: 1;
+}
+
 .userContainer {
   display: flex;
   flex-direction: column;

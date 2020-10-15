@@ -14,7 +14,7 @@ const Offline = React.forwardRef(function Offline(props, ref) {
       </a>
 
       <div className={classes.userContainer}>
-        <h4 className={classes.userName}> {offlines.userName} </h4>
+        <h4 className={classes.userName}> {offlines.userName}  <span className={classes.userArrow}>&or;</span></h4>
 
         <h5 className={classes.userStatus}> {offlines.userStatus} </h5>
       </div>
