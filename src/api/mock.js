@@ -116,11 +116,11 @@ export const friends = [
 export const offline = [
   {
     userName: "maeertin",
-    userStatus: "Offline",
+    userStatus: "Last online 3 months ago",
   },
   {
     userName: "Peter",
-    userStatus: "Offline",
+    userStatus: "Last online 14 hours ago",
   }
 ]
 
