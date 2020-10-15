@@ -20,13 +20,13 @@
   justify-content: center;
 }
 
-.userName {
-  color: gray;
-  margin: 0;
-}
-
+.userName,
 .userStatus {
   color: gray;
   margin: 0;
+  font-size: 0.8rem;
+}
+
+.userStatus {
   margin-bottom: 5px;
 }

@@ -6,11 +6,11 @@ import classes from './Offline.module.css'
 
 const Offline = React.forwardRef(function Offline(props, ref) {
   const { offlines, className, ...other } = props
-  console.log(offlines.userName, 'inside')
+
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
           <a className={classes.userImg} href="/">
-        <img src="//source.unsplash.com/45x45?gaming" alt="" />
+        <img src="//source.unsplash.com/40x40?gaming" alt="" />
       </a>
 
       <div className={classes.userContainer}>
