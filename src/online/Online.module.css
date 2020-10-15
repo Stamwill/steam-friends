@@ -13,8 +13,12 @@
   opacity: 1;
 }
 
+.userArrow:hover {
+  color: gainsboro;
+}
+
 .userImg {
-  padding-right: 1rem;
+  padding-right: 0.5rem;
 }
 
 .userContainer {
@@ -33,8 +37,8 @@
 
 .userArrow {
   opacity: 0;
-  padding-left: 5px;
-  font-size: 0.8rem;
+  padding-left: 2px;
+  font-size: 0.6rem;
   color: rgba(102, 192, 244, 0.5);
   cursor: pointer;
 }
