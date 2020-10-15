@@ -5,6 +5,7 @@
 }
 
 .searchLabel {
+  opacity: 1;
   align-self: center;
   color: gainsboro;
   padding-left: 20px;
@@ -13,8 +14,9 @@
 
 .searchInput {
   position: relative;
-  width: 80%;
+  width: 90%;
   height: 80%;
+  padding-left: 10px;
   align-self: center;
   opacity: 0;
   transition: 0.5s;
@@ -35,8 +37,19 @@ input:focus {
   background-color: #373a40;
 }
 
+.searchInput:active + .searchLabel {
+  display: none;
+}
+
 .magnifyingGlass {
   position: relative;
+  height: 20px;
+  align-self: center;
+  right: 25px;
+  color: gray;
+}
+
+.addFriend {
   height: 20px;
   align-self: center;
   right: 25px;

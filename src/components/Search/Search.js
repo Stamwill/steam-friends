@@ -14,7 +14,7 @@ const Search = React.forwardRef(function Search(props, ref) {
 
         <input className={classes.searchInput} type="search" name="friends" placeholder="search friends" />
         <img className={classes.magnifyingGlass} src="/magnifying-glass.png" alt="search"/>
-
+        <img className={classes.addFriend} src="/add-friend.png" alt="add" />
     </div>
   )
 })
