@@ -12,6 +12,7 @@
 }
 
 .searchInput {
+  position: relative;
   width: 80%;
   height: 80%;
   align-self: center;
@@ -30,4 +31,14 @@
 .searchInput:active,
 input:focus {
   outline: none;
+  opacity: 1;
+  background-color: #373a40;
+}
+
+.magnifyingGlass {
+  position: relative;
+  height: 20px;
+  align-self: center;
+  right: 25px;
+  color: gray;
 }

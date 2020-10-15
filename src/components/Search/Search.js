@@ -11,7 +11,10 @@ const Search = React.forwardRef(function Search(props, ref) {
       <label className={classes.searchLabel} name="friends">
         Friends
       </label>
-      <input className={classes.searchInput} type="search" name="friends" />
+
+        <input className={classes.searchInput} type="search" name="friends" placeholder="search friends" />
+        <img className={classes.magnifyingGlass} src="/magnifying-glass.png" alt="search"/>
+
     </div>
   )
 })
