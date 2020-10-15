@@ -9,7 +9,7 @@ const OfflineList = React.forwardRef(function OfflineList(props, ref) {
 
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
-              <div>
+        <div>
           {offlines.map((offline, idx) => (
             <Offline key={idx} offlines={offline} />
           ))}
