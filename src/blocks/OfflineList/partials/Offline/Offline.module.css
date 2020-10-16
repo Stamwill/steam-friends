@@ -1,0 +1,48 @@
+.root {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0 0.2rem 0.5rem;
+  width: 98vw;
+}
+
+.root:hover {
+  background-color: rgba(102, 192, 244, 0.1);
+}
+
+.userImg {
+  padding-right: 1rem;
+}
+
+.userArrow {
+  opacity: 0;
+  padding-left: 2px;
+  font-size: 0.6rem;
+  color: rgba(49, 53, 56, 1);
+  cursor: pointer;
+}
+
+.root:hover .userArrow {
+  opacity: 1;
+}
+
+.userArrow:hover {
+  color: gainsboro;
+}
+
+.userContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.userName,
+.userStatus {
+  color: gray;
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.userStatus {
+  margin-bottom: 5px;
+}
