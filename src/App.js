@@ -1,23 +1,25 @@
 import React from 'react'
-import FriendsList from 'components/FriendsList/FriendsList'
 import * as api from 'api/mock'
 import Topbar from 'components/Topbar/Topbar'
 import Search from 'components/Search/Search'
-import OnlineFriends from 'OnlineFriends/OnlineFriends'
 import classes from 'App.module.css'
-import OfflineFriends from './OfflineFriends/OfflineFriends'
-import OfflineList from './OfflineList/OfflineList'
+import FriendsList from './blocks/FriendsList'
+import OfflineList from './blocks/OfflineList'
 
 function App() {
   return (
     <div className="App">
       <Topbar />
       <Search />
+
       <hr className={classes.split} />
-      <OnlineFriends friends={api.friends}/>
+      <h2 className={classes.onlineFriends}>Online Friends</h2>
+
       <FriendsList friends={api.friends} />
+
       <hr className={classes.onlineSplit} />
-      <OfflineFriends />
+      <h2 className={classes.offlineFriends}>Offline Friends</h2>
+
       <OfflineList offlines={api.offline} />
     </div>
   )
