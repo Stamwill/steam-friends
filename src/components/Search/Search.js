@@ -1,6 +1,8 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'clsx'
+import { HiUserAdd } from 'react-icons/hi';
+import { AiOutlineSearch } from 'react-icons/ai';
 import classes from './Search.module.css'
 
 const Search = React.forwardRef(function Search(props, ref) {
@@ -13,8 +15,12 @@ const Search = React.forwardRef(function Search(props, ref) {
       </label>
 
         <input className={classes.searchInput} type="search" name="friends" placeholder="search friends" />
-        <img className={classes.magnifyingGlass} src="/magnifying-glass.png" alt="search"/>
-        <img className={classes.addFriend} src="/add-friend.png" alt="add" />
+
+        <div className={classes.searchIcons}>
+          <AiOutlineSearch className={classes.magnifying}/>
+          <HiUserAdd className={classes.add}/>
+        </div>
+
     </div>
   )
 })
