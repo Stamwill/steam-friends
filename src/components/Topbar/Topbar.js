@@ -2,6 +2,7 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'clsx'
 import { FaCog } from 'react-icons/fa'; 
+import DownArrow from '../DownArrow/DownArrow'
 import classes from './Topbar.module.css'
 
 const Topbar = React.forwardRef(function Topbar(props, ref) {
@@ -17,8 +18,10 @@ const Topbar = React.forwardRef(function Topbar(props, ref) {
         />
 
         <div className={classes.userContainer}>
-          <h4 className={classes.userName}>Cyndraz  <span className={classes.userArrow}>&or;</span></h4>
-
+          <div className={classes.userAndArrow}>
+            <h4 className={classes.userName}>Cyndraz  </h4>
+            <DownArrow />
+          </div>
           <h5 className={classes.userStatus}>Online</h5>
         </div>
 
