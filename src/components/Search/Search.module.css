@@ -53,5 +53,6 @@ input:focus {
   height: 20px;
   align-self: center;
   right: 25px;
+  padding-right: 5px;
   color: gray;
 }
