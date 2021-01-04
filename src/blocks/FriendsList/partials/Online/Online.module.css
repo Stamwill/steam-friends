@@ -14,7 +14,7 @@
 }
 
 .userArrow:hover {
-  color: gainsboro;
+  color: black;
 }
 
 .userImg {
@@ -28,17 +28,19 @@
   justify-content: center;
 }
 
+.friendAndOptions {
+  display: flex;
+  align-items: center;
+}
+
+.userArrow {
+  opacity: 0;
+  color: white;
+}
+
 .userName,
 .userStatus {
   font-size: 0.8rem;
   margin: 0;
   color: #66c0f4;
-}
-
-.userArrow {
-  opacity: 0;
-  padding-left: 2px;
-  font-size: 0.6rem;
-  color: rgba(102, 192, 244, 0.5);
-  cursor: pointer;
 }
