@@ -14,10 +14,12 @@ const Search = React.forwardRef(function Search(props, ref) {
         Friends
       </label>
 
+        <div className={classes.searchField}>
         <input className={classes.searchInput} type="search" name="friends" placeholder="search friends" />
-
+        <AiOutlineSearch className={classes.magnifying}/>
+        </div>
         <div className={classes.searchIcons}>
-          <AiOutlineSearch className={classes.magnifying}/>
+          {/* <AiOutlineSearch className={classes.magnifying}/> */}
           <HiUserAdd className={classes.add}/>
         </div>
 
