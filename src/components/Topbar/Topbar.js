@@ -1,6 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'clsx'
+import { FaCog } from 'react-icons/fa'; 
 import classes from './Topbar.module.css'
 
 const Topbar = React.forwardRef(function Topbar(props, ref) {
@@ -21,6 +22,9 @@ const Topbar = React.forwardRef(function Topbar(props, ref) {
           <h5 className={classes.userStatus}>Online</h5>
         </div>
 
+        <div className={classes.settings}>
+          <FaCog className={classes.cogWheel}/>
+        </div>
       </main>
     </div>
   )

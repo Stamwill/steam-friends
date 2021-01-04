@@ -37,3 +37,16 @@
   margin: 0;
   color: #66c0f4;
 }
+
+.settings {
+  margin-left: auto;
+  margin-top: auto;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+.cogWheel {
+  height: 20px;
+  width: 20px;
+  color: gray;
+}
