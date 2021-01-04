@@ -15,10 +15,6 @@
 
 .userArrow {
   opacity: 0;
-  padding-left: 2px;
-  font-size: 0.6rem;
-  color: rgba(49, 53, 56, 1);
-  cursor: pointer;
 }
 
 .root:hover .userArrow {
@@ -36,13 +32,14 @@
   justify-content: center;
 }
 
+.friendAndOptions {
+  display: flex;
+  align-items: center;
+}
+
 .userName,
 .userStatus {
   color: gray;
   margin: 0;
   font-size: 0.8rem;
-}
-
-.userStatus {
-  margin-bottom: 5px;
 }
