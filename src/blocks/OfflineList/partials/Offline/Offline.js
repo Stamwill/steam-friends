@@ -2,7 +2,7 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'clsx'
 import { userType } from 'utils/index'
-import DownArrow from '../../../../components/DownArrow/DownArrow'
+import DownArrow from '../../../../components/DownArrow'
 import classes from './Offline.module.css'
 
 const Offline = React.forwardRef(function Offline(props, ref) {
