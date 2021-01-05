@@ -1,0 +1,45 @@
+.root {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0 0.2rem 0.5rem;
+  width: 98vw;
+}
+
+.root:hover {
+  background-color: rgba(102, 192, 244, 0.1);
+}
+
+.root:hover .userArrow {
+  opacity: 1;
+}
+
+.userArrow:hover {
+  color: black;
+}
+
+.userImg {
+  padding-right: 0.5rem;
+}
+
+.userContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.friendAndOptions {
+  display: flex;
+  align-items: center;
+}
+
+.userArrow {
+  opacity: 0;
+}
+
+.userName,
+.userStatus {
+  font-size: 0.8rem;
+  margin: 0;
+  color: #66c0f4;
+}
