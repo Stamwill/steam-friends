@@ -1,8 +1,9 @@
 import * as React from 'react'
 import * as api from 'api/mock'
-import Topbar from 'components/Topbar/Topbar'
-import Search from 'components/Search/Search'
+import Topbar from 'components/Topbar'
+import Search from 'components/Search'
 import classes from 'App.module.css'
+import FriendOptions from './blocks/FriendOptions'
 import FriendsList from './blocks/OnlineList'
 import OfflineList from './blocks/OfflineList'
 
@@ -24,6 +25,7 @@ function App() {
       <h2 className={classes.offlineFriends}>Offline Friends</h2>
 
       <OfflineList offlines={api.offline} />
+      <FriendOptions />
     </div>
   )
 }
