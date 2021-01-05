@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'clsx'
-import DownArrow from '../../../../components/DownArrow/DownArrow'
+import DownArrow from '../../../../components/DownArrow'
 import classes from './Online.module.css'
 
 const Online = React.forwardRef(function Online(props, ref) {
