@@ -3,7 +3,7 @@ import * as api from 'api/mock'
 import Topbar from 'components/Topbar/Topbar'
 import Search from 'components/Search/Search'
 import classes from 'App.module.css'
-import FriendsList from './blocks/FriendsList'
+import FriendsList from './blocks/OnlineList'
 import OfflineList from './blocks/OfflineList'
 
 function App() {
