@@ -3,17 +3,17 @@ import * as api from 'api/mock'
 import Topbar from 'components/Topbar'
 import Search from 'components/Search'
 import classes from 'App.module.css'
-import FriendOptions from './blocks/FriendOptions'
-import FriendsList from './blocks/OnlineList'
+import OnlineList from './blocks/OnlineList'
 import OfflineList from './blocks/OfflineList'
 
 function App() {
 
-  // const [option, setOption] = React.useState('none')
+   const [option, setOption] = React.useState('none')
 
-  // const handleOption = () => {
-
-  // }
+   const toggleOption = () => {
+     setOption('block')
+    console.log('clicked')
+   }
 
   return (
     <div className="App">
@@ -23,13 +23,12 @@ function App() {
 
       <h2 className={classes.onlineFriends}>Online Friends</h2>
 
-      <FriendsList friends={api.friends} />
+      <OnlineList friends={api.friends} option={option} toggleOption={toggleOption}/>
 
       <hr className={classes.onlineSplit} />
       <h2 className={classes.offlineFriends}>Offline Friends</h2>
 
       <OfflineList offlines={api.offline} />
-      <FriendOptions />
     </div>
   )
 }
