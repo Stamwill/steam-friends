@@ -2,6 +2,7 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'clsx'
 import DownArrow from '../../../../components/DownArrow'
+import FriendOptions from '../../../FriendOptions/FriendOptions'
 import classes from './Online.module.css'
 
 const Online = React.forwardRef(function Online(props, ref) {
@@ -19,6 +20,7 @@ const Online = React.forwardRef(function Online(props, ref) {
           <h4 className={classes.userName}>{friends.userName}</h4>
           <div className={classes.userArrow}>
             <DownArrow />
+            <FriendOptions />
           </div>
         </div>
         <h5 className={classes.userStatus}> {friends.userStatus} </h5>
