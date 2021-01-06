@@ -6,7 +6,7 @@ import FriendOptions from '../../../FriendOptions/FriendOptions'
 import classes from './Online.module.css'
 
 const Online = React.forwardRef(function Online(props, ref) {
-  const { friends, className, ...other } = props
+  const { toggleOption, friends, className, ...other } = props
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
 
@@ -19,7 +19,7 @@ const Online = React.forwardRef(function Online(props, ref) {
         <div className={classes.friendAndOptions}>
           <h4 className={classes.userName}>{friends.userName}</h4>
           <div className={classes.userArrow}>
-            <DownArrow />
+            <DownArrow toggleOption={toggleOption}/>
             <FriendOptions />
           </div>
         </div>
@@ -34,7 +34,7 @@ const Online = React.forwardRef(function Online(props, ref) {
 Online.propTypes = {
   friends: PropTypes.object.isRequired,
   className: PropTypes.string,
-
+  toggleOption: PropTypes.func
 }
 
 Online.uiName = 'Online'
