@@ -1,4 +1,5 @@
 import * as React from 'react'
+// import PropTypes from 'prop-types'
 import classes from './FriendOptions.module.css'
 
 const FriendOptions = React.forwardRef(function FriendOptions(props, ref) {
@@ -18,6 +19,11 @@ const FriendOptions = React.forwardRef(function FriendOptions(props, ref) {
     </div>
   )
 })
+
+// FriendOptions.propTypes = {
+  
+
+// }
 
 
 
