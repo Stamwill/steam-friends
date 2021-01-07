@@ -2,7 +2,7 @@ import * as React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'clsx'
 import { userType } from 'utils/index'
-import DownArrow from '../../../../components/DownArrow'
+import OptionArrow from '../../../../components/OptionArrow'
 import classes from './Offline.module.css'
 
 const Offline = React.forwardRef(function Offline(props, ref) {
@@ -18,7 +18,7 @@ const Offline = React.forwardRef(function Offline(props, ref) {
         <div className={classes.friendAndOptions}>
           <h4 className={classes.userName}>{offlines.userName}</h4>
           <div className={classes.userArrow}>
-            <DownArrow />
+            <OptionArrow />
           </div>
         </div>
         <h5 className={classes.userStatus}> {offlines.userStatus} </h5>
