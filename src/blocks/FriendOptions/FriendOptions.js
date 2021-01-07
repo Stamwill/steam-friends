@@ -5,7 +5,7 @@ import classes from './FriendOptions.module.css'
 
 const FriendOptions = React.forwardRef(function FriendOptions(props, ref) {
   const { open, ...other } = props
-  console.log(open)
+  
   return (
     <div className={classnames(classes.root,{ [ classes.open ]: open } )} {...other}>
       <div className={classes.optionList}>
