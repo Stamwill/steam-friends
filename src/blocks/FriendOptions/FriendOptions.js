@@ -1,10 +1,13 @@
 import * as React from 'react'
-// import PropTypes from 'prop-types'
+import classnames from 'clsx'
+import propTypes from 'prop-types'
 import classes from './FriendOptions.module.css'
 
 const FriendOptions = React.forwardRef(function FriendOptions(props, ref) {
+  const { open, ...other } = props
+  console.log(open)
   return (
-    <div className={classes.root}>
+    <div className={classnames(classes.root,{ [ classes.open ]: open } )} {...other}>
       <div className={classes.optionList}>
         <h3 className={classes.option}>Send Message</h3>
           <hr />
@@ -20,11 +23,8 @@ const FriendOptions = React.forwardRef(function FriendOptions(props, ref) {
   )
 })
 
-// FriendOptions.propTypes = {
-  
-
-// }
-
-
+FriendOptions.propTypes = {
+  open: propTypes.bool,
+}
 
 export default FriendOptions
