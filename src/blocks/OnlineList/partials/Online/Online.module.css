@@ -5,11 +5,18 @@
   width: 98vw;
 }
 
-.root:hover {
+.root:hover,
+.open {
   background-color: rgba(102, 192, 244, 0.1);
 }
 
-.root:hover .userArrow {
+.userArrow {
+  position: relative;
+  opacity: 0;
+}
+
+.root:hover .userArrow,
+.open .userArrow {
   opacity: 1;
 }
 
@@ -31,10 +38,6 @@
 .friendAndOptions {
   display: flex;
   align-items: center;
-}
-
-.userArrow {
-  opacity: 0;
 }
 
 .userName,
