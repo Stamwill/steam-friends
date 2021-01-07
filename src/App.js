@@ -7,14 +7,6 @@ import OnlineList from './blocks/OnlineList'
 import OfflineList from './blocks/OfflineList'
 
 function App() {
-
-   const [option, setOption] = React.useState('none')
-
-   const toggleOption = () => {
-     setOption('block')
-    console.log('clicked')
-   }
-
   return (
     <div className="App">
       <Topbar />
@@ -23,7 +15,8 @@ function App() {
 
       <h2 className={classes.onlineFriends}>Online Friends</h2>
 
-      <OnlineList friends={api.friends} option={option} toggleOption={toggleOption}/>
+      <OnlineList friends={api.friends} 
+      />
 
       <hr className={classes.onlineSplit} />
       <h2 className={classes.offlineFriends}>Offline Friends</h2>
