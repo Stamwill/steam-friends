@@ -5,14 +5,39 @@ import Online from './partials/Online'
 import classes from './OnlineList.module.css'
 
 const OnlineList = React.forwardRef(function OnlineList(props, ref) {
-  const { friends, toggleOption, className, ...other } = props
+  const { friends, className, ...other } = props
 
+    // const [arrowDown, setArrowDown] = React.useState(false)
+    const [toggleState, setToggleState] = React.useState(undefined)
+
+    // const toggleArrow = () => {
+    //   setArrowDown((prevState) => !prevState)
+    // }
+  
+    const toggleOption = (idx) => () => {
+      if (idx === toggleState) {
+        setToggleState(undefined)
+      } else {
+        setToggleState(idx)
+      }
+    }
+
+    const mouseLeave = () => {
+      setToggleState(undefined)
+    }
+  
   return (
     <article className={classnames(classes.root, className)} ref={ref} {...other}>
       <div>
         <div>
           {friends.map((friend, idx) => (
-            <Online key={idx} friends={friend} toggleOption={toggleOption} />
+            <Online 
+              key={idx} 
+              friends={friend}  
+              toggleOption={toggleOption(idx)}
+              open={idx === toggleState}
+              onMouseLeave={mouseLeave}
+            />
           ))}
         </div>
       </div>
@@ -22,8 +47,9 @@ const OnlineList = React.forwardRef(function OnlineList(props, ref) {
 
 OnlineList.propTypes = {
   friends: PropTypes.array.isRequired,
-  toggleOption: PropTypes.func,
   className: PropTypes.string,
+  toggleOption: PropTypes.func,
+  open: PropTypes.bool
 }
 
 OnlineList.uiName = 'OnlineList'
