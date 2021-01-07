@@ -5,7 +5,8 @@
   width: 98vw;
 }
 
-.root:hover {
+.root:hover,
+.open {
   background-color: rgba(102, 192, 244, 0.1);
 }
 
@@ -14,10 +15,12 @@
 }
 
 .userArrow {
+  position: relative;
   opacity: 0;
 }
 
-.root:hover .userArrow {
+.root:hover .userArrow,
+.open .userArrow {
   opacity: 1;
 }
 
