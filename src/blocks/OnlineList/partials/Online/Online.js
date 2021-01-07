@@ -7,7 +7,7 @@ import classes from './Online.module.css'
 
 const Online = React.forwardRef(function Online(props, ref) {
   const { friends, open, toggleOption, className, onMouseLeave, ...other } = props
-  console.log(open, 'online')
+
   return (
     <div className={classnames(classes.root, { [classes.open]: open }, className)} ref={ref} {...other}>
 
