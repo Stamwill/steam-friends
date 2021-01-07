@@ -7,11 +7,26 @@ import classes from './OfflineList.module.css'
 const OfflineList = React.forwardRef(function OfflineList(props, ref) {
   const { offlines, className, ...other } = props
 
+  const [toggleState, setToggleState] = React.useState(undefined)
+
+  const toggleOption = (idx) => () => {
+    if (idx === toggleState) {
+      setToggleState(undefined)
+    } else {
+      setToggleState(idx)
+    }
+  }
+
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
         <div>
           {offlines.map((offline, idx) => (
-            <Offline key={idx} offlines={offline} />
+            <Offline 
+              key={idx} 
+              offlines={offline} 
+              toggleOption={toggleOption(idx)}  
+              open={idx === toggleState}
+            />
           ))}
         </div>
     </div>
