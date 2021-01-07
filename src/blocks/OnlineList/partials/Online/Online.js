@@ -1,14 +1,15 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'clsx'
-import DownArrow from '../../../../components/DownArrow'
+import OptionArrow from '../../../../components/OptionArrow'
 import FriendOptions from '../../../FriendOptions/FriendOptions'
 import classes from './Online.module.css'
 
 const Online = React.forwardRef(function Online(props, ref) {
-  const { toggleOption, friends, className, ...other } = props
+  const { friends, open, toggleOption, className, onMouseLeave, ...other } = props
+  console.log(open, 'online')
   return (
-    <div className={classnames(classes.root, className)} ref={ref} {...other}>
+    <div className={classnames(classes.root, { [classes.open]: open }, className)} ref={ref} {...other}>
 
 
        <a className={classes.userImg} href="/">
@@ -19,8 +20,8 @@ const Online = React.forwardRef(function Online(props, ref) {
         <div className={classes.friendAndOptions}>
           <h4 className={classes.userName}>{friends.userName}</h4>
           <div className={classes.userArrow}>
-            <DownArrow toggleOption={toggleOption}/>
-            <FriendOptions />
+            <OptionArrow toggleOption={toggleOption}/>
+            <FriendOptions open={open} onMouseLeave={onMouseLeave}/>
           </div>
         </div>
         <h5 className={classes.userStatus}> {friends.userStatus} </h5>
@@ -34,7 +35,9 @@ const Online = React.forwardRef(function Online(props, ref) {
 Online.propTypes = {
   friends: PropTypes.object.isRequired,
   className: PropTypes.string,
-  toggleOption: PropTypes.func
+  toggleOption: PropTypes.func,
+  open: PropTypes.bool,
+  onMouseLeave: PropTypes.func
 }
 
 Online.uiName = 'Online'
