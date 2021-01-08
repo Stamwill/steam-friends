@@ -10,7 +10,7 @@ const UserOption = React.forwardRef(function userOption(props, ref) {
 
           <div className={classes.invisibleOption}>
             <h4 className={classes.option}>Invisible</h4>
-            <p className={classes.optionInfo}> Appear Offline, but you can still chat </p>
+            <p className={classes.optionInfo}> Appear offline, but you can still chat </p>
           </div>
 
           <div className={classes.offline}>
@@ -27,7 +27,7 @@ const UserOption = React.forwardRef(function userOption(props, ref) {
               <h4 className={classes.option}>Do Not Disturb</h4>
             </div>
 
-            <p className={classes.optionInfo}>Disables all chat notifications</p>
+            <span className={classes.disableOption}>Disables all chat notifications</span>
           </div>
 
           <hr />
