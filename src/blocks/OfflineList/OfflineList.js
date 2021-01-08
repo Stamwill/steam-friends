@@ -17,6 +17,11 @@ const OfflineList = React.forwardRef(function OfflineList(props, ref) {
     }
   }
 
+  
+  const mouseLeave = () => {
+    setToggleState(undefined)
+  }
+
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
         <div>
@@ -26,6 +31,7 @@ const OfflineList = React.forwardRef(function OfflineList(props, ref) {
               offlines={offline} 
               toggleOption={toggleOption(idx)}  
               open={idx === toggleState}
+              onMouseLeave={mouseLeave}
             />
           ))}
         </div>
