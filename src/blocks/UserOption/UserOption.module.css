@@ -1,0 +1,47 @@
+.root {
+  background-color: #373a40;
+  color: lightgray;
+  width: 200px;
+}
+
+.online {
+  color: #66c0f4;
+}
+
+.optionContainer {
+  margin-left: 10px;
+}
+
+.option {
+  padding: 10px;
+  margin: 0;
+  font-size: 14px;
+}
+
+.option:hover {
+  background-color: gray;
+}
+
+.invisibleOption {
+  display: flex;
+  flex-direction: column;
+}
+
+.invisibleOption:hover {
+  background-color: gray;
+}
+
+.optionInfo {
+  margin: 0;
+  font-size: 12px;
+}
+
+.doNotDisturb {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkDisturb {
+  display: flex;
+  align-items: center;
+}
