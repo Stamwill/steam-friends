@@ -3,6 +3,7 @@ import * as api from 'api/mock'
 import Topbar from 'components/Topbar'
 import Search from 'components/Search'
 import classes from 'App.module.css'
+import UserOption from './blocks/UserOption'
 import OnlineList from './blocks/OnlineList'
 import OfflineList from './blocks/OfflineList'
 
@@ -12,6 +13,7 @@ function App() {
       <Topbar />
       <Search />
       
+      <UserOption />
 
       <h2 className={classes.onlineFriends}>Online Friends</h2>
 
