@@ -1,6 +1,6 @@
 .root {
   background-color: #373a40;
-  color: lightgray;
+  color: rgba(191, 191, 191, 0.8);
   width: 200px;
 }
 
@@ -9,11 +9,12 @@
 }
 
 .optionContainer {
-  margin-left: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .option {
-  padding: 10px;
+  padding: 5px;
   margin: 0;
   font-size: 14px;
 }
@@ -25,9 +26,20 @@
 .invisibleOption {
   display: flex;
   flex-direction: column;
+  padding: 0;
 }
 
 .invisibleOption:hover {
+  background-color: gray;
+}
+
+.offline {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.offline:hover {
   background-color: gray;
 }
 
@@ -41,7 +53,16 @@
   flex-direction: column;
 }
 
+.doNotDisturb:hover {
+  background-color: gray;
+}
+
 .checkDisturb {
   display: flex;
   align-items: center;
+}
+
+hr {
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
