@@ -7,7 +7,7 @@ import FriendOptions from '../../../FriendOptions/FriendOptions'
 import classes from './Offline.module.css'
 
 const Offline = React.forwardRef(function Offline(props, ref) {
-  const { offlines, open, toggleOption, className, ...other } = props
+  const { offlines, open, onMouseLeave, toggleOption, className, ...other } = props
 
   return (
     <div className={classnames(classes.root, { [classes.open]: open }, className)} ref={ref} {...other}>
@@ -20,7 +20,7 @@ const Offline = React.forwardRef(function Offline(props, ref) {
           <h4 className={classes.userName}>{offlines.userName}</h4>
           <div className={classes.userArrow}>
             <OptionArrow toggleOption={toggleOption}/>
-            <FriendOptions open={open}/>
+            <FriendOptions open={open} onMouseLeave={onMouseLeave}/>
           </div>
         </div>
         <h5 className={classes.userStatus}> {offlines.userStatus} </h5>
@@ -33,6 +33,7 @@ Offline.propTypes = {
   userType: PropTypes.arrayOf(userType),
   offlines: PropTypes.object,
   open: PropTypes.bool,
+  onMouseLeave: PropTypes.func,
   toggleOption: PropTypes.func,
   className: PropTypes.string,
 }
