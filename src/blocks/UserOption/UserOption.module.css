@@ -3,6 +3,7 @@
   color: rgba(191, 191, 191, 0.8);
   width: 200px;
   height: 240px;
+  display: none;
 }
 
 .online {
