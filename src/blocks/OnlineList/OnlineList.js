@@ -7,12 +7,7 @@ import classes from './OnlineList.module.css'
 const OnlineList = React.forwardRef(function OnlineList(props, ref) {
   const { friends, className, ...other } = props
 
-    // const [arrowDown, setArrowDown] = React.useState(false)
     const [toggleState, setToggleState] = React.useState(undefined)
-
-    // const toggleArrow = () => {
-    //   setArrowDown((prevState) => !prevState)
-    // }
   
     const toggleOption = (idx) => () => {
       if (idx === toggleState) {
