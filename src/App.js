@@ -3,7 +3,6 @@ import * as api from 'api/mock'
 import Topbar from 'components/Topbar'
 import Search from 'components/Search'
 import classes from 'App.module.css'
-import UserOption from './blocks/UserOption'
 import OnlineList from './blocks/OnlineList'
 import OfflineList from './blocks/OfflineList'
 
@@ -22,13 +21,12 @@ function App() {
 
   return (
     <div className="App">
-      <Topbar toggleUserOption={toggleUserOption}/>
+      <Topbar toggleUserOption={toggleUserOption} />
       <Search />
       
       <h2 className={classes.onlineFriends}>Online Friends</h2>
 
-      <OnlineList friends={api.friends} 
-      />
+      <OnlineList friends={api.friends} />
 
       <hr className={classes.onlineSplit} />
       <h2 className={classes.offlineFriends}>Offline Friends</h2>
