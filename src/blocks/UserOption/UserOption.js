@@ -1,9 +1,10 @@
 import * as React from 'react'
+import classnames from 'clsx'
 import classes from './UserOption.module.css'
 
 const UserOption = React.forwardRef(function userOption(props, ref) {
   return (
-    <div className={classes.root}>
+    <div className={classnames(classes.root)}>
       <div className={classes.optionContainer}>
         <h4 className={classes.option}><span className={classes.online}>Online</span></h4>
         <h4 className={classes.option}>Away</h4>
