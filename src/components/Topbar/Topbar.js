@@ -19,6 +19,10 @@ const Topbar = React.forwardRef(function Topbar(props, ref) {
     }
   }
 
+  const onMouseLeave = () => {
+    setToggleState(false)
+  }
+
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
       <main className={classes.main}>
@@ -32,7 +36,7 @@ const Topbar = React.forwardRef(function Topbar(props, ref) {
           <div className={classes.userAndArrow}>
             <h4 className={classes.userName}>Cyndraz  </h4>
             <UserArrow toggleUserOption={toggleUserOption}/>
-            <UserOption open={toggleState}/>
+            <UserOption open={toggleState} onMouseLeave={onMouseLeave}/>
           </div>
           <h5 className={classes.userStatus}>Online</h5>
         </div>
