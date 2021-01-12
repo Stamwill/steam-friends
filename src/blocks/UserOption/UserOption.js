@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 import classes from './UserOption.module.css'
 
 const UserOption = React.forwardRef(function userOption(props, ref) {
-  const { open } = props
+  const { open, ...other } = props
 
   return (
-    <div className={classnames(classes.root, { [ classes.open ]: open})}>
+    <div className={classnames(classes.root, { [ classes.open ]: open})} {...other}>
       <div className={classes.optionContainer}>
         <h4 className={classes.option}><span className={classes.online}>Online</span></h4>
         <h4 className={classes.option}>Away</h4>
