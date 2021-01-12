@@ -23,8 +23,8 @@ const FriendSettings = React.forwardRef(function FriendSettings(props, ref) {
           <h2 className={classes.heading}>Append nicknames to friends' names</h2>
 
           <div className={classes.onOffButtons}>
-            <button className={classes.buttonOff}>Off</button>
-            <button className={classes.buttonOn}>On</button>
+            <button className={classes.buttonOff} type="submit">Off</button>
+            <button className={classes.buttonOn} type="submit">On</button>
           </div>
         </div>
 
@@ -32,8 +32,8 @@ const FriendSettings = React.forwardRef(function FriendSettings(props, ref) {
           <h2 className={classes.heading}>Group friends together by game</h2>
 
           <div className={classes.onOffButtons}>
-            <button className={classes.buttonOff}>Off</button>
-            <button className={classes.buttonOn}>On</button>
+            <button className={classes.buttonOff} type="submit">Off</button>
+            <button className={classes.buttonOn} type="submit">On</button>
           </div>
         </div>
 
@@ -41,8 +41,8 @@ const FriendSettings = React.forwardRef(function FriendSettings(props, ref) {
           <h2 className={classes.heading}>Hide offline friends in custom categories</h2>
 
           <div className={classes.onOffButtons}>
-            <button className={classes.buttonOff}>Off</button>
-            <button className={classes.buttonOn}>On</button>
+            <button className={classes.buttonOff} type="submit">Off</button>
+            <button className={classes.buttonOn} type="submit">On</button>
           </div>
         </div>
 
@@ -50,8 +50,8 @@ const FriendSettings = React.forwardRef(function FriendSettings(props, ref) {
           <h2 className={classes.heading}>Hide categorized friends in Online/Offline Friends</h2>
 
           <div className={classes.onOffButtons}>
-            <button className={classes.buttonOff}>Off</button>
-            <button className={classes.buttonOn}>On</button>
+            <button className={classes.buttonOff} type="submit">Off</button>
+            <button className={classes.buttonOn} type="submit">On</button>
           </div>
         </div>
 
@@ -59,8 +59,8 @@ const FriendSettings = React.forwardRef(function FriendSettings(props, ref) {
           <h2 className={classes.heading}>Ignore 'Away' status when sorting friends</h2>
 
           <div className={classes.onOffButtons}>
-            <button className={classes.buttonOff}>Off</button>
-            <button className={classes.buttonOn}>On</button>
+            <button className={classes.buttonOff} type="submit">Off</button>
+            <button className={classes.buttonOn} type="submit">On</button>
           </div>
         </div>
 
@@ -68,8 +68,8 @@ const FriendSettings = React.forwardRef(function FriendSettings(props, ref) {
           <h2 className={classes.heading}>Sign in to friends when Steam Client starts</h2>
 
           <div className={classes.onOffButtons}>
-            <button className={classes.buttonOff}>Off</button>
-            <button className={classes.buttonOn}>On</button>
+            <button className={classes.buttonOff} type="submit">Off</button>
+            <button className={classes.buttonOn} type="submit">On</button>
           </div>
         </div>
 
@@ -77,8 +77,8 @@ const FriendSettings = React.forwardRef(function FriendSettings(props, ref) {
           <h2 className={classes.heading}>Enable Animated Avatars & Animated Avatar Frames in your Friends List and Chat</h2>
 
           <div className={classes.onOffButtons}>
-            <button className={classes.buttonOff}>Off</button>
-            <button className={classes.buttonOn}>On</button>
+            <button className={classes.buttonOff} type="submit">Off</button>
+            <button className={classes.buttonOn} type="submit">On</button>
           </div>
         </div>
       </div>

@@ -64,6 +64,11 @@ button {
   padding: 7px 20px;
 }
 
+button:hover {
+  cursor: pointer;
+  background-color: white;
+}
+
 .buttonOff {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -72,9 +77,4 @@ button {
 .buttonOn {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-}
-
-button:hover {
-  cursor: pointer;
-  background-color: white;
 }
