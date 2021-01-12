@@ -34,13 +34,15 @@ const Topbar = React.forwardRef(function Topbar(props, ref) {
 
         <div className={classes.userContainer}>
           <div className={classes.userAndArrow}>
-            <h4 className={classes.userName}>Cyndraz  </h4>
+            <h4 className={classes.userName}> Cyndraz </h4>
+            
             <UserArrow toggleUserOption={toggleUserOption}/>
             <UserOption open={toggleState} onMouseLeave={onMouseLeave}/>
           </div>
+
           <h5 className={classes.userStatus}>Online</h5>
         </div>
-
+        
         <div className={classes.settings}>
           <FaCog className={classes.cogWheel}/>
         </div>
