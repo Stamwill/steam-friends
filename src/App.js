@@ -8,20 +8,9 @@ import OfflineList from './blocks/OfflineList'
 
 function App() {
 
-  const [ toggleState, setToggleState ] = React.useState(undefined)
-
-  const toggleUserOption = (idx) => {
-    if (idx === toggleState) {
-      setToggleState(undefined)
-    } else {
-      setToggleState(idx)
-    }
-    console.log('clicked')
-  }
-
   return (
     <div className="App">
-      <Topbar toggleUserOption={toggleUserOption} />
+      <Topbar />
       <Search />
       
       <h2 className={classes.onlineFriends}>Online Friends</h2>
