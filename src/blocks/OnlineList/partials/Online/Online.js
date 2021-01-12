@@ -13,7 +13,7 @@ const Online = React.forwardRef(function Online(props, ref) {
 
 
        <a className={classes.userImg} href="/">
-        <img src="//source.unsplash.com/40x40?gaming" alt="" />
+        <img src="//source.unsplash.com/40x40?hiking" alt="" />
       </a>
 
       <div className={classes.userContainer}>
