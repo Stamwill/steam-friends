@@ -3,11 +3,21 @@ import PropTypes from 'prop-types'
 import classnames from 'clsx'
 import { FaCog } from 'react-icons/fa'; 
 import UserOption from '../../blocks/UserOption/UserOption'
-import UserArrow from './partials'
+import UserArrow from '../../blocks/UserOption/partials'
 import classes from './Topbar.module.css'
 
 const Topbar = React.forwardRef(function Topbar(props, ref) {
-  const { toggleUserOption, className, ...other } = props
+  const { className, ...other } = props
+
+  const [ toggleState, setToggleState ] = React.useState(false)
+
+  const toggleUserOption = () => {
+    if (toggleState) {
+      setToggleState(false)
+    } else {
+      setToggleState(true)
+    }
+  }
 
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
@@ -22,7 +32,7 @@ const Topbar = React.forwardRef(function Topbar(props, ref) {
           <div className={classes.userAndArrow}>
             <h4 className={classes.userName}>Cyndraz  </h4>
             <UserArrow toggleUserOption={toggleUserOption}/>
-            <UserOption />
+            <UserOption open={toggleState}/>
           </div>
           <h5 className={classes.userStatus}>Online</h5>
         </div>
