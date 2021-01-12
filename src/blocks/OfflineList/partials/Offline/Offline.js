@@ -12,7 +12,7 @@ const Offline = React.forwardRef(function Offline(props, ref) {
   return (
     <div className={classnames(classes.root, { [classes.open]: open }, className)} ref={ref} {...other}>
           <a className={classes.userImg} href="/">
-        <img src="//source.unsplash.com/40x40?gaming" alt="" />
+        <img src="//source.unsplash.com/40x40?game" alt="" />
       </a>
 
       <div className={classes.userContainer}>
