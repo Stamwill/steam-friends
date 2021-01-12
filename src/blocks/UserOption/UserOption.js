@@ -1,10 +1,13 @@
 import * as React from 'react'
 import classnames from 'clsx'
+import PropTypes from 'prop-types'
 import classes from './UserOption.module.css'
 
 const UserOption = React.forwardRef(function userOption(props, ref) {
+  const { open } = props
+
   return (
-    <div className={classnames(classes.root)}>
+    <div className={classnames(classes.root, { [ classes.open ]: open})}>
       <div className={classes.optionContainer}>
         <h4 className={classes.option}><span className={classes.online}>Online</span></h4>
         <h4 className={classes.option}>Away</h4>
@@ -38,5 +41,9 @@ const UserOption = React.forwardRef(function userOption(props, ref) {
     </div>
   )
 })
+
+UserOption.propTypes = {
+  open: PropTypes.bool,
+}
 
 export default UserOption;

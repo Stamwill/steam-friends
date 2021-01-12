@@ -1,9 +1,17 @@
 .root {
+  position: absolute;
+  left: 80px;
+  top: 0;
   background-color: #373a40;
   color: rgba(191, 191, 191, 0.8);
   width: 200px;
   height: 240px;
   display: none;
+  z-index: 1;
+}
+
+.open {
+  display: block;
 }
 
 .online {
