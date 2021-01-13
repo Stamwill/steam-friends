@@ -15,12 +15,12 @@ const Offline = React.forwardRef(function Offline(props, ref) {
         <img src="//source.unsplash.com/40x40?mice" alt="" />
       </a>
 
-      <div className={classes.userContainer}>
+      <div className={classes.userContainer} onMouseLeave={onMouseLeave}>
         <div className={classes.friendAndOptions}>
           <h4 className={classes.userName}>{offlines.userName}</h4>
           <div className={classes.userArrow}>
             <OptionArrow toggleOption={toggleOption}/>
-            <FriendOptions open={open} onMouseLeave={onMouseLeave}/>
+            <FriendOptions open={open} />
           </div>
         </div>
         <h5 className={classes.userStatus}> {offlines.userStatus} </h5>
