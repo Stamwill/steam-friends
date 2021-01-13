@@ -13,6 +13,18 @@ import ListItem from './partials/ListItem'
 const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
   const { open, listSettings, handleSettings } = props
 
+  const [togglePage, setTogglePage] = React.useState(undefined)
+
+  const handleTogglePage = (idx) => () => {
+    if (togglePage) {
+      setTogglePage(undefined)
+      console.log('clickd')
+    } else {
+      setTogglePage(idx)
+    }
+    console.log('clicked')
+  }
+
   return (
     <div className={classnames(classes.root, {[classes.open]: open})}>
         <div className={classes.leftContainer}>
@@ -22,14 +34,14 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
             <ListItem 
               key={idx}
               list={list}
-              
+              handleTogglePage={handleTogglePage(idx)}
             />
           ))}
 
         </div>
 
         <div className={classes.rightContainer}>
-          <FriendSettings handleSettings={handleSettings} idx={1}/>
+          <FriendSettings handleSettings={handleSettings} />
           <ChatSettings idx={2} />
         </div>
       

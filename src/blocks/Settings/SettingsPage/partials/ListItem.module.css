@@ -6,3 +6,7 @@
   color: white;
   cursor: pointer;
 }
+
+.open {
+  display: block;
+}

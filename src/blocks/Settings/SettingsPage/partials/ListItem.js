@@ -5,17 +5,17 @@ import classes from './ListItem.module.css'
 
 
 const ListItem = React.forwardRef(function ListItem(props, ref) {
-  const { list, ...other } = props
-
+  const { list, handleTogglePage, ...other } = props
   return (
     <div className={classnames(classes.root)} ref={ref} {...other}>
-      <h3 className={classes.settingTitle}>{list.title}</h3>
+      <h3 className={classes.settingTitle} onClick={handleTogglePage} >{list.title}</h3>
     </div>
   )
 })
 
 ListItem.propTypes = {
   list: PropTypes.object,
+  handleTogglePage: PropTypes.func,
 }
 
 export default ListItem
