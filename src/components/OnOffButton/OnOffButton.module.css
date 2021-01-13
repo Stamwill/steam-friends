@@ -1,0 +1,21 @@
+button {
+  border: none;
+  display: inline-block;
+  background-color: gray;
+  padding: 7px 20px;
+}
+
+.buttonOff {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.buttonOn {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: white;
+}
