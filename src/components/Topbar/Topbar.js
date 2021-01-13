@@ -32,7 +32,7 @@ const Topbar = React.forwardRef(function Topbar(props, ref) {
           alt="profile"
         />
 
-        <div className={classes.userContainer}>
+        <div className={classes.userContainer} onMouseLeave={onMouseLeave}>
           <div className={classes.userAndArrow}>
             <h4 className={classes.userName}> Cyndraz </h4>
             
