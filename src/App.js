@@ -23,10 +23,13 @@ function App() {
     <div className="App">
       <Topbar handleSettings={handleSettings}/>
       <Search />
-
       
-      <SettingsPage open={toggleSettings} handleSettings={handleSettings} className={classes.settingsTest}/>
-      
+      <SettingsPage 
+        open={toggleSettings} 
+        handleSettings={handleSettings} 
+        className={classes.settingsTest}
+        listSettings={api.listSettings}
+      />
       
       <h2 className={classes.onlineFriends}>Online Friends</h2>
 
