@@ -1,25 +1,19 @@
 import * as React from 'react'
+import { AiFillCloseCircle } from 'react-icons/ai'
+import PropTypes from 'prop-types'
 import OnOffButton from '../../../../components/OnOffButton'
 import classes from './FriendSettings.module.css'
 
 const FriendSettings = React.forwardRef(function FriendSettings(props, ref) {
-
+  const { handleSettings } = props
   return (
     <div className={classes.root}>
-      <div className={classes.leftContainer}>
-        <h3 className={classes.settings}>Friends List Settings</h3>
-        
-        <h2 className={classes.leftOption}>FRIENDS LIST</h2>
-        <h2 className={classes.leftOption}>CHAT</h2>
-        <h2 className={classes.leftOption}>SIZE & SCALING</h2>
-        <h2 className={classes.leftOption}>NOTIFICATIONS</h2>
-        <h2 className={classes.leftOption}>VOICE</h2>
-
-      </div>
-
       <div className={classes.rightContainer}>
-        <h1 className={classes.header}>FRIENDS LIST</h1>
-
+        <div className={classes.closeOptions}>
+          <h1 className={classes.header}>FRIENDS LIST</h1>
+          <AiFillCloseCircle className={classes.cross} onClick={handleSettings} />
+        </div>
+        
         <div className={classes.rightOption}>
           <h2 className={classes.heading}>Append nicknames to friends' names</h2>
           <div className={classes.onOffButtons}>
@@ -72,5 +66,9 @@ const FriendSettings = React.forwardRef(function FriendSettings(props, ref) {
     </div>
   )
 })
+
+FriendSettings.propTypes = {
+  handleSettings: PropTypes.func,
+}
 
 export default FriendSettings
