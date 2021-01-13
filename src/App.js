@@ -3,18 +3,30 @@ import * as api from 'api/mock'
 import Topbar from 'components/Topbar'
 import Search from 'components/Search'
 import classes from 'App.module.css'
-import FriendSettings from './blocks/FriendSettings'
+import SettingsPage from './blocks/Settings/SettingsPage'
 import OnlineList from './blocks/OnlineList'
 import OfflineList from './blocks/OfflineList'
 
 function App() {
 
+  const [toggleSettings, setToggleSettings] = React.useState(false)
+
+  const handleSettings = () => {
+    if (toggleSettings) {
+      setToggleSettings(false)
+    } else {
+      setToggleSettings(true)
+    }
+  }
+
   return (
     <div className="App">
-      <Topbar />
+      <Topbar handleSettings={handleSettings}/>
       <Search />
 
-      <FriendSettings />
+      
+      <SettingsPage open={toggleSettings} handleSettings={handleSettings} className={classes.settingsTest}/>
+      
       
       <h2 className={classes.onlineFriends}>Online Friends</h2>
 
