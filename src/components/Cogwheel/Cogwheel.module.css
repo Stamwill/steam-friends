@@ -1,0 +1,10 @@
+.cogWheel {
+  height: 20px;
+  width: 20px;
+  color: gray;
+}
+
+.cogWheel:hover {
+  color: white;
+  cursor: pointer;
+}
