@@ -1,0 +1,8 @@
+.settingTitle {
+  margin: 5px;
+}
+
+.settingTitle:hover {
+  color: white;
+  cursor: pointer;
+}
