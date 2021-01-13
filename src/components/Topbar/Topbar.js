@@ -1,13 +1,13 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'clsx'
-import { FaCog } from 'react-icons/fa'; 
+import Cogwheel from 'components/Cogwheel'
 import UserOption from '../../blocks/UserOption/UserOption'
 import UserArrow from '../../blocks/UserOption/partials'
 import classes from './Topbar.module.css'
 
 const Topbar = React.forwardRef(function Topbar(props, ref) {
-  const { className, ...other } = props
+  const { handleSettings, className, ...other } = props
 
   const [ toggleState, setToggleState ] = React.useState(false)
 
@@ -44,7 +44,7 @@ const Topbar = React.forwardRef(function Topbar(props, ref) {
         </div>
         
         <div className={classes.settings}>
-          <FaCog className={classes.cogWheel}/>
+          <Cogwheel handleSettings={handleSettings}/>
         </div>
       </main>
     </div>
@@ -52,6 +52,7 @@ const Topbar = React.forwardRef(function Topbar(props, ref) {
 })
 
 Topbar.propTypes = {
+  handleSettings: PropTypes.func,
   toggleUserOption: PropTypes.func,
   className: PropTypes.string,
 }
