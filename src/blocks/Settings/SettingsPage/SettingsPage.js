@@ -1,8 +1,8 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'clsx'
-import ChatSettings from '../partials/ChatSettings'
 import FriendSettings from '../partials/FriendSettings'
+import ChatSettings from '../partials/ChatSettings'
 // import NotificationSettings from '../partials/NotificationSettings'
 // import SizeScaleSettings from '../partials/SizeScaleSettings'
 // import VoiceSettings from '../partials/VoiceSettings'
@@ -12,39 +12,52 @@ import ListItem from './partials/ListItem'
 
 const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
   const { open, listSettings, handleSettings } = props
+  
+  const [togglePage, setTogglePage] = React.useState(false)
+  const [toggleChat, setToggleChat] = React.useState(false)
 
-  const [togglePage, setTogglePage] = React.useState(undefined)
-
-  const handleTogglePage = (idx) => () => {
+  const handleTogglePage = () => {
     if (togglePage) {
-      setTogglePage(undefined)
-      console.log('clickd')
+      setTogglePage(false)
+      console.log('false')
     } else {
-      setTogglePage(idx)
+      setTogglePage(true)
+      console.log('true')
     }
-    console.log('clicked')
+  }
+
+  const handleToggleChat = (idx) => () => {
+    if (toggleChat) {
+      setToggleChat(false)
+      console.log('chat')
+    } else {
+      setToggleChat(idx)
+    }
   }
 
   return (
     <div className={classnames(classes.root, {[classes.open]: open})}>
-        <div className={classes.leftContainer}>
-          <h3 className={classes.settings}>Friends List Settings</h3>
-          
-          {listSettings.map((list,idx) => (
+      <div className={classes.leftContainer}>
+        <h3 className={classes.settings}>Friends List Settings</h3>
+        
+        {listSettings.map((list,idx) => (
+          <div key={idx}>
             <ListItem 
               key={idx}
               list={list}
-              handleTogglePage={handleTogglePage(idx)}
+              handleTogglePage={handleTogglePage}
             />
-          ))}
+          </div>
+        ))} 
+      </div>
 
-        </div>
-
-        <div className={classes.rightContainer}>
-          <FriendSettings handleSettings={handleSettings} />
-          <ChatSettings idx={2} />
+      <div className={classes.rightContainer}>
+        <div>
+          <FriendSettings handleSettings={handleSettings} open={togglePage}/>
+          <ChatSettings open={toggleChat} />
         </div>
       
+      </div>
     </div>
   )
 })

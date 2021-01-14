@@ -6,6 +6,7 @@ import classes from './ListItem.module.css'
 
 const ListItem = React.forwardRef(function ListItem(props, ref) {
   const { list, handleTogglePage, ...other } = props
+  console.log(handleTogglePage)
   return (
     <div className={classnames(classes.root)} ref={ref} {...other}>
       <h3 className={classes.settingTitle} onClick={handleTogglePage} >{list.title}</h3>
