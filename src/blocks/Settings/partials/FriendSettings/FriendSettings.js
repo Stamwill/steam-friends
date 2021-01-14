@@ -1,13 +1,14 @@
 import * as React from 'react'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import PropTypes from 'prop-types'
+import classnames from 'clsx'
 import OnOffButton from '../../../../components/OnOffButton'
 import classes from './FriendSettings.module.css'
 
 const FriendSettings = React.forwardRef(function FriendSettings(props, ref) {
-  const { handleSettings } = props
+  const { handleSettings, open } = props
   return (
-    <div className={classes.root}>
+    <div className={classnames(classes.root, {[ classes.open ]: open })}>
       <div className={classes.rightContainer}>
         <div className={classes.closeOptions}>
           <h1 className={classes.header}>FRIENDS LIST</h1>
