@@ -1,13 +1,8 @@
 .root {
-  display: none;
 }
 
 .rightHeader {
   display: flex;
-}
-
-.open {
-  display: block;
 }
 
 .cross {
