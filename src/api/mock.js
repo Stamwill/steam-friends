@@ -38,19 +38,24 @@ export const offline = [
 
 export const listSettings = [
   {
-    title: "FRIENDSLIST"
+    title: "FRIENDSLIST",
+    id: 0
   },
   {
-    title: "CHAT"
+    title: "CHAT",
+    id: 1
   },
   {
-    title: "SIZE & SCALING"
+    title: "SIZE & SCALING",
+    id: 2,
   },
   {
-    title: "NOTIFICATIONS"
+    title: "NOTIFICATIONS",
+    id: 3,
   },
   {
-    title: "VOICE"
+    title: "VOICE",
+    id: 4,
   }
 ]
 
