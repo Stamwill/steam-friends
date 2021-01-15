@@ -7,7 +7,7 @@ import UserArrow from '../../blocks/UserOption/partials'
 import classes from './Topbar.module.css'
 
 const Topbar = React.forwardRef(function Topbar(props, ref) {
-  const { handleSettings, className, ...other } = props
+  const { onToggleSettings, className, ...other } = props
 
   const [ toggleState, setToggleState ] = React.useState(false)
 
@@ -44,7 +44,7 @@ const Topbar = React.forwardRef(function Topbar(props, ref) {
         </div>
         
         <div className={classes.settings}>
-          <Cogwheel handleSettings={handleSettings}/>
+          <Cogwheel handleSettings={onToggleSettings}/>
         </div>
       </main>
     </div>
@@ -52,7 +52,7 @@ const Topbar = React.forwardRef(function Topbar(props, ref) {
 })
 
 Topbar.propTypes = {
-  handleSettings: PropTypes.func,
+  onToggleSettings: PropTypes.func,
   toggleUserOption: PropTypes.func,
   className: PropTypes.string,
 }
