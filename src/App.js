@@ -9,24 +9,20 @@ import OfflineList from './blocks/OfflineList'
 
 function App() {
 
-  const [toggleSettings, setToggleSettings] = React.useState(false)
+  const [settingsOpen, setSettingsOpen] = React.useState(false)
 
-  const handleSettings = () => {
-    if (toggleSettings) {
-      setToggleSettings(false)
-    } else {
-      setToggleSettings(true)
-    }
+  const handleToggleSettings = () => {
+    setSettingsOpen((prevState) => !prevState)
   }
 
   return (
     <div className="App">
-      <Topbar handleSettings={handleSettings}/>
+      <Topbar onToggleSettings={handleToggleSettings}/>
       <Search />
       
       <SettingsPage 
-        open={toggleSettings} 
-        handleSettings={handleSettings} 
+        open={settingsOpen} 
+        onClose={handleToggleSettings} 
         className={classes.settingsTest}
         listSettings={api.listSettings}
       />
