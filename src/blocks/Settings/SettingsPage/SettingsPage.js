@@ -12,14 +12,13 @@ import ListItem from './partials/ListItem'
 
 
 const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
-  const { open, listSettings, onClose } = props
-  
+  const { open, listSettings, friendOptions, onClose } = props
   const [pageIndex, setPageIndex] = React.useState(0)
-
+  
   const handlePageIndex = (idx) => () => {
     setPageIndex(idx)
   }
-
+  
   return (
     <div className={classnames(classes.root, {[classes.open]: open} )} ref={ref}>
       <div className={classes.leftContainer}>
@@ -39,7 +38,7 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
       <div className={classes.rightContainer}>
         <div>
           <AiFillCloseCircle className={classes.cross} onClick={onClose} />
-          { pageIndex === 0 && <FriendSettings /> }
+          { pageIndex === 0 && <FriendSettings friendOptions={friendOptions}/> }
           { pageIndex === 1 && <ChatSettings /> }
           { pageIndex === 2 && <NotificationSettings /> }
           { pageIndex === 3 && <SizeScaleSettings /> }
