@@ -1,13 +1,25 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import OnOffButton from '../../../../components/OnOffButton'
+import SettingOptionsContainer from '../../../../components/SettingOptionsContainer'
 import classes from './FriendSettings.module.css'
+
 
 const FriendSettings = React.forwardRef(function FriendSettings(props, ref) {
 
+  const { friendOptions } = props
+  console.log(friendOptions)
   return (
     <div className={classes.root} ref={ref}>
       <div className={classes.rightContainer}>
+        {friendOptions.map((option, idx) => (
+          <SettingOptionsContainer 
+            key={idx}
+            friendOptions={option}
+          />
+        ) 
+        
+        )}
         <div className={classes.closeOptions}>
           <h1 className={classes.header}>FRIENDS LIST</h1>
         </div>
