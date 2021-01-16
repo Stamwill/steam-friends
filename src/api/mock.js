@@ -59,4 +59,28 @@ export const listSettings = [
   }
 ]
 
+export const friendOptionList = [
+  {
+    option: "Append nicknames to friends' names",
+  },
+  {
+    option: "Group friends together by game"
+  },
+  {
+    option: "Hide offline friends in custom categories"
+  },
+  {
+    option: "Hide categorized friends in Online/Offline Friends"
+  },
+  {
+    option: "Ignore 'Away' status when sorting friends"
+  },
+  {
+    option: "Sign in to friends when Steam Client starts"
+  },
+  {
+    option: "Enable Animated Avatars & Animated Avatar Frames in your Friends List and Chat"
+  }
+]
+
 // export default { friends, offline }
