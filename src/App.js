@@ -25,6 +25,7 @@ function App() {
         onClose={handleToggleSettings} 
         className={classes.settingsTest}
         listSettings={api.listSettings}
+        friendOptions={api.friendOptionList}
       />
       
       <h2 className={classes.onlineFriends}>Online Friends</h2>
