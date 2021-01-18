@@ -10,7 +10,7 @@ const SettingOptionsContainer = React.forwardRef(function SettingOptionsContaine
   return (
     <div className={classes.root} ref={ref}>
        <div className={classes.optionContainer}>
-         <h2>{friendOptions.option}</h2>
+         <h2 className={classes.option}>{friendOptions.option}</h2>
           <div className={classes.onOffButtons}>
             <OnOffButton />
           </div>
