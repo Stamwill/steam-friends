@@ -1,10 +1,26 @@
 .optionContainer {
   display: flex;
+  align-items: center;
   background-color: #404040;
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
   width: 90%;
+}
+
+.infoContainer {
+  width: 80%;
+}
+
+.option {
+  width: 100%;
+}
+
+.info {
+  font-size: 10px;
+  width: 60%;
+  margin: 0;
+  padding: 0;
 }
 
 .onOffButtons {

@@ -10,8 +10,10 @@ const ChatOptionsContainer = React.forwardRef(function ChatOptionsContainer(prop
   return (
     <div className={classes.root} ref={ref}>
        <div className={classes.optionContainer}>
-         <h2>{chatOptions.option}</h2>
-         <h6>{chatOptions.info}</h6>
+          <div className={classes.infoContainer}>
+            <h2 className={classes.option}>{chatOptions.option}</h2>
+            <h6 className={classes.info}>{chatOptions.info}</h6>
+          </div>
           <div className={classes.onOffButtons}>
             <OnOffButton />
           </div>
