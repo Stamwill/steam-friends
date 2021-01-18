@@ -26,6 +26,9 @@ function App() {
         className={classes.settingsTest}
         listSettings={api.listSettings}
         friendOptions={api.friendOptionList}
+        chatOptions={api.chatOptionList}
+        sizeOptions={api.sizeOptionList}
+        notificationOptions={api.notificationOptionList}
       />
       
       <h2 className={classes.onlineFriends}>Online Friends</h2>
