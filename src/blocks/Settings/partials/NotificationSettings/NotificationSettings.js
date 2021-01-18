@@ -9,6 +9,7 @@ const NotificationSettings = React.forwardRef(function NotificationSettings(prop
   
   return (
     <div className={classes.root}>
+      <h2 className={classes.header}>NOTIFICATIONS</h2>
      {notificationOptions.map((option, idx) => (        
       <NotificationOptionsContainer 
         key={idx}
