@@ -83,4 +83,51 @@ export const friendOptionList = [
   }
 ]
 
-// export default { friends, offline }
+export const chatOptionList = [
+  {
+    option: "Dock chats to the friends list",
+  },
+  {
+    option: "Open a new window for new chats (rather than a tab)",
+  },
+  {
+    option: "Don't embed imaged and other media in-line"
+  },
+  { 
+    option: "Remember my open chats",
+    info: "Restores tabs for chats that were previously open when you launch Steam. This option does not apply if Steam starts when your computer starts"
+  },
+  {
+    option: "Always display timestamps in 24-hour format"
+  },
+  {
+    option: "Disable spellcheck in chat message-entry"
+  },
+]
+
+export const sizeOptionList = [
+  {
+    option: "Compact friends list & chat view"
+  },
+  {
+    option: "Compact favorite area"
+  }
+]
+
+export const notificationOptionList = [
+  {
+    option: "When a friend joins a game"
+  },
+  {
+    option: "When a friend comes online"
+  },
+  {
+    option: "When I recieve a direct chat message"
+  },
+  {
+    option: "When I recieve a chat room notification"
+  },
+  {
+    option: "Group events and announcements"
+  }
+]
