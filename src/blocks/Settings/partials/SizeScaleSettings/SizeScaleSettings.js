@@ -9,6 +9,7 @@ const SizeScaleSettings = React.forwardRef(function SizeScaleSettings(props, ref
 
   return (
     <div className={classes.root}>
+      <h2 className={classes.header}>SIZE & SCALING</h2>
       {sizeOptions.map((option, idx) => (
         <SizeScaleOptionsContainer 
           key={idx}
