@@ -12,7 +12,16 @@ import ListItem from './partials/ListItem'
 
 
 const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
-  const { open, listSettings, friendOptions, onClose } = props
+  const { 
+    open, 
+    listSettings, 
+    friendOptions, 
+    chatOptions, 
+    sizeOptions,
+    notificationOptions, 
+    onClose 
+  } = props
+
   const [pageIndex, setPageIndex] = React.useState(0)
   
   const handlePageIndex = (idx) => () => {
@@ -39,9 +48,9 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
         <div>
           <AiFillCloseCircle className={classes.cross} onClick={onClose} />
           { pageIndex === 0 && <FriendSettings friendOptions={friendOptions}/> }
-          { pageIndex === 1 && <ChatSettings /> }
-          { pageIndex === 2 && <NotificationSettings /> }
-          { pageIndex === 3 && <SizeScaleSettings /> }
+          { pageIndex === 1 && <ChatSettings chatOptions={chatOptions} /> }
+          { pageIndex === 2 && <SizeScaleSettings sizeOptions={sizeOptions}/> }
+          { pageIndex === 3 && <NotificationSettings notificationOptions={notificationOptions}/> }
           { pageIndex === 4 && <VoiceSettings /> }
         </div>
       </div>
@@ -53,6 +62,10 @@ SettingsPage.propTypes = {
   open: PropTypes.bool,
   onClose: PropTypes.func,
   listSettings: PropTypes.array,
+  friendOptions: PropTypes.array,
+  chatOptions: PropTypes.array,
+  notificationOptions: PropTypes.array,
+  sizeOptions: PropTypes.array
 }
 
 export default SettingsPage
