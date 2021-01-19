@@ -1,6 +1,6 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
-import NotificationOptionsContainer from './partials/NotificationsOptionsContainer'
+import NotificationOptionsContainer from './partials/NotificationsSettingsContainer'
 import classes from './NotificationSettings.module.css'
 
 const NotificationSettings = React.forwardRef(function NotificationSettings(props, ref) {
