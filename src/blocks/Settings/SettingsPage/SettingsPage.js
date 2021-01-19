@@ -5,7 +5,7 @@ import { AiFillCloseCircle } from 'react-icons/ai'
 import FriendSettings from '../partials/FriendSettings'
 import ChatSettings from '../partials/ChatSettings'
 import NotificationSettings from '../partials/NotificationSettings'
-import SizeScaleSettings from '../partials/SizeScaleSettings'
+import SizeSettings from '../partials/SizeSettings'
 import VoiceSettings from '../partials/VoiceSettings'
 import classes from './SettingsPage.module.css'
 import ListItem from './partials/ListItem'
@@ -50,7 +50,7 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
           <AiFillCloseCircle className={classes.cross} onClick={onClose} />
           { pageIndex === 0 && <FriendSettings friendOptions={friendOptions} /> }
           { pageIndex === 1 && <ChatSettings chatOptions={chatOptions} /> }
-          { pageIndex === 2 && <SizeScaleSettings sizeOptions={sizeOptions}/> }
+          { pageIndex === 2 && <SizeSettings sizeOptions={sizeOptions}/> }
           { pageIndex === 3 && <NotificationSettings notificationOptions={notificationOptions}/> }
           { pageIndex === 4 && <VoiceSettings /> }
       </div>
