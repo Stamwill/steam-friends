@@ -19,7 +19,7 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
     chatOptions, 
     sizeOptions,
     notificationOptions, 
-    onClose 
+    onClose,
   } = props
 
   const [pageIndex, setPageIndex] = React.useState(0)
@@ -27,7 +27,9 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
   const handlePageIndex = (idx) => () => {
     setPageIndex(idx)
   }
-  
+
+
+
   return (
     <div className={classnames(classes.root, {[classes.open]: open} )} ref={ref}>
       <div className={classes.leftContainer}>
@@ -46,7 +48,7 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
 
       <div className={classes.rightContainer}>
           <AiFillCloseCircle className={classes.cross} onClick={onClose} />
-          { pageIndex === 0 && <FriendSettings friendOptions={friendOptions}/> }
+          { pageIndex === 0 && <FriendSettings friendOptions={friendOptions} /> }
           { pageIndex === 1 && <ChatSettings chatOptions={chatOptions} /> }
           { pageIndex === 2 && <SizeScaleSettings sizeOptions={sizeOptions}/> }
           { pageIndex === 3 && <NotificationSettings notificationOptions={notificationOptions}/> }
