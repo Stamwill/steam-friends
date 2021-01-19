@@ -15,12 +15,19 @@ const NotificationSettings = React.forwardRef(function NotificationSettings(prop
             <h3 className={classes.showNotification}>Show a notification</h3>
             <h3 className={classes.playSound}>Play a sound</h3>
           </div>
-     {notificationOptions.map((option, idx) => (        
-      <NotificationOptionsContainer 
-        key={idx}
-        notificationOptions={option}
-       />
-     ))}
+      {notificationOptions.map((option, idx) => (        
+        <NotificationOptionsContainer 
+          key={idx}
+          notificationOptions={option}
+        />
+      ))}
+
+      <h2 className={classes.chatMessageHeader}>FLASH WINDOW WHEN I RECIEVE A CHAT MESSAGE:</h2>
+      <div className={classes.buttons}>
+        <button className={classes.button}type="submit">Always</button>
+        <button className={classes.button}type="submit">Only when minimized</button>
+        <button className={classes.button}type="submit">Never</button>
+      </div>
     </div>
   )
 })

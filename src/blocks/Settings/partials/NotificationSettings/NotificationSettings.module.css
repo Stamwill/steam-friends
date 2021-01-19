@@ -8,14 +8,45 @@
 
 .inputHeaders {
   display: flex;
+  align-items: center;
   margin-right: 100px;
 }
 
 .friendNotification {
   margin-left: 0;
-  margin-right: 220px;
+  margin-right: 200px;
+  font-weight: 400;
+  font-size: 15px;
+  color: rgba(110, 100, 100, 1);
 }
 
 .showNotification {
   margin-right: 70px;
+  color: rgba(110, 100, 100, 1);
+}
+
+.chatMessageHeader {
+  font-weight: 300;
+  color: rgba(110, 100, 100, 1);
+}
+
+.playSound {
+  color: rgba(110, 100, 100, 1);
+}
+
+.button {
+  width: 200px;
+  margin-left: 0;
+  margin-right: 10px;
+  border: none;
+  border-radius: 2px;
+  background-color: rgba(110, 100, 100, 0.2);
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: rgba(110, 100, 100, 0.3);
+  box-shadow: 0px 1px 5px 1px #000000;
+  opacity: 1;
 }
