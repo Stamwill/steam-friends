@@ -5,7 +5,8 @@
 button {
   border: none;
   display: inline-block;
-  background-color: gray;
+  background-color: rgba(211, 211, 211, 0.5);
+  color: white;
   padding: 7px 20px;
 }
 
@@ -17,6 +18,14 @@ button {
 .buttonOn {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+.onOpen {
+  background-color: black;
+}
+
+.buttonOn:current {
+  background-color: blue;
 }
 
 button:hover {
