@@ -1,5 +1,11 @@
 .settingTitle {
-  margin: 5px;
+  margin: 8px;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.title {
+  font-size: 30px;
 }
 
 .settingTitle:hover {
