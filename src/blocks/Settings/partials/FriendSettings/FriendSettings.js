@@ -21,7 +21,6 @@ const FriendSettings = React.forwardRef(function FriendSettings(props, ref) {
             friendOptions={option}
           />
         ) 
-        
         )}
       </div>
     </div>
