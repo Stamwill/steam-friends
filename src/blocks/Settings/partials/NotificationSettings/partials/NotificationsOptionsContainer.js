@@ -10,7 +10,7 @@ const NotificationOptionsContainer = React.forwardRef(function NotificationOptio
   return (
     <div className={classes.root} ref={ref}>
        <div className={classes.optionContainer}>
-         <h2>{notificationOptions.option}</h2>
+         <h2 className={classes.option}>{notificationOptions.option}</h2>
           <div className={classes.onOffButtons}>
             <OnOffButton />
           </div>
