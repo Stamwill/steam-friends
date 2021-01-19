@@ -1,6 +1,5 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
-import OnOffButton from '../../../../../components/OnOffButton'
 import classes from './NotificationsOptionsContainer.module.css'
 
 const NotificationOptionsContainer = React.forwardRef(function NotificationOptionsContainer(props, ref) {
@@ -9,12 +8,12 @@ const NotificationOptionsContainer = React.forwardRef(function NotificationOptio
 
   return (
     <div className={classes.root} ref={ref}>
-       <div className={classes.optionContainer}>
-         <h2 className={classes.option}>{notificationOptions.option}</h2>
-          <div className={classes.onOffButtons}>
-            <OnOffButton />
-          </div>
-        </div>
+      <div className={classes.optionContainer}>
+        <h2 className={classes.option}>{notificationOptions.option}</h2>
+          
+        <input className={classes.firstCheck} type="checkbox" />
+        <input className={classes.secondCheck} type="checkbox" />
+      </div>
     </div>
   )
 })

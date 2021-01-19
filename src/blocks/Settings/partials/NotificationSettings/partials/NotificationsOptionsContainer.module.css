@@ -8,14 +8,17 @@
 }
 
 .option {
-  width: 60%;
+  width: 40%;
   font-weight: 300;
   margin: 0;
   padding: 10px;
 }
 
-.onOffButtons {
-  margin-left: auto;
+.firstCheck {
+}
+
+.secondCheck {
+  margin-left: 150px;
 }
 
 .heading {
