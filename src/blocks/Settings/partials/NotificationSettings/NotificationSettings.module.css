@@ -5,3 +5,17 @@
   font-size: 35px;
   font-weight: 300;
 }
+
+.inputHeaders {
+  display: flex;
+  margin-right: 100px;
+}
+
+.friendNotification {
+  margin-left: 0;
+  margin-right: 220px;
+}
+
+.showNotification {
+  margin-right: 70px;
+}

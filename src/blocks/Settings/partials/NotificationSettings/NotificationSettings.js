@@ -10,6 +10,11 @@ const NotificationSettings = React.forwardRef(function NotificationSettings(prop
   return (
     <div className={classes.root}>
       <h2 className={classes.header}>NOTIFICATIONS</h2>
+      <div className={classes.inputHeaders}>
+            <h3 className={classes.friendNotification}>FRIEND NOTIFICATIONS</h3>
+            <h3 className={classes.showNotification}>Show a notification</h3>
+            <h3 className={classes.playSound}>Play a sound</h3>
+          </div>
      {notificationOptions.map((option, idx) => (        
       <NotificationOptionsContainer 
         key={idx}
