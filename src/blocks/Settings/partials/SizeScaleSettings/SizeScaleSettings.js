@@ -16,6 +16,13 @@ const SizeScaleSettings = React.forwardRef(function SizeScaleSettings(props, ref
           sizeOptions={option}
         />
       ))}
+
+      <h2 className={classes.fontSize}>CHAT FONT SIZE</h2>
+      <div className={classes.buttonContainer}>
+        <button className={classes.button} type="submit">small</button>
+        <button className={classes.button} type="submit">Default</button>
+        <button className={classes.button} type="submit">Large</button>
+      </div>
     </div>
   )
 })
