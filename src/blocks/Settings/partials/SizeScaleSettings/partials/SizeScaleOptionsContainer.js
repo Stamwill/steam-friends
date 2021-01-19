@@ -10,7 +10,7 @@ const SizeScaleOptionsContainer = React.forwardRef(function SizeScaleOptionsCont
   return (
     <div className={classes.root} ref={ref}>
        <div className={classes.optionContainer}>
-         <h2>{sizeOptions.option}</h2>
+         <h2 className={classes.option}>{sizeOptions.option}</h2>
           <div className={classes.onOffButtons}>
             <OnOffButton />
           </div>
