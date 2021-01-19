@@ -38,7 +38,7 @@ export const offline = [
 
 export const listSettings = [
   {
-    title: "FRIENDSLIST",
+    title: "FRIENDS LIST",
     id: 0
   },
   {
