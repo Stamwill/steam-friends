@@ -10,10 +10,10 @@ const ChatSettings = React.forwardRef(function ChatSettings(props, ref) {
     <div className={classes.root} ref={ref} >
       <h2 className={classes.header}>CHAT</h2>
       {chatOptions.map((option, idx) => (
-         <ChatOptionsContainer 
-         key={idx}
-         chatOptions={option}
-       />
+        <ChatOptionsContainer 
+        key={idx}
+        chatOptions={option}
+        />
       ))}
     </div>
   )
