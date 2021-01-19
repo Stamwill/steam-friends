@@ -1,3 +1,7 @@
+.buttons {
+  padding: 5px;
+}
+
 button {
   border: none;
   display: inline-block;
