@@ -12,13 +12,37 @@ const VoiceSettings = React.forwardRef(function VoiceSettings(props, ref) {
       </div>
 
       <div className={classes.voiceInpDev}>
-        <label htmlFor="Voice Input Device">VOICE INPUT DEVICE</label>
-        <select>
+        <label className={classes.voiceInpLabel} htmlFor="Voice Input Device">VOICE INPUT DEVICE</label>
+        <select className={classes.selectVoiceInput}>
           <option>Default</option>
           <option>Headphone</option>
           <option>Speakers</option>
         </select>
       </div>
+
+      <div className={classes.voiceOutDev}>
+        <label className={classes.voiceOutLabel} htmlFor="Voice Input Device">VOICE INPUT DEVICE</label>
+        <select className={classes.selectVoiceInput}>
+          <option>Default</option>
+          <option>Headphone</option>
+          <option>Speakers</option>
+        </select>
+      </div>
+
+      <div className={classes.volumeSliderContainer}>
+        <div className={classes.volumeSlider}>
+          <h3 className={classes.volumeHeader}>Input volume/gain</h3>
+          <input className={classes.volumeRange} type="range" />
+          <p className={classes.myMicrophone}>(My microphone)</p>
+        </div>
+
+        <div className={classes.volumeSlider}>
+          <h3 className={classes.volumeHeader}>Output volume/gain</h3>
+          <input className={classes.volumeRange} type="range" />
+          <p className={classes.myMicrophone}>(My friends)</p>
+        </div>
+      </div>
+
     </div>
   )
 })

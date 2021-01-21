@@ -8,18 +8,16 @@
 
 .micTestContainer {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .micTest {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
-  width: 500px;
+  height: 90px;
+  width: 70%;
   background-color: rgba(110, 100, 100, 0.2);
-  border: 5px solid rgba(110, 100, 100, 0.7);
+  border: 8px solid rgba(110, 100, 100, 0.7);
 }
 
 .button {
@@ -35,8 +33,55 @@
 }
 
 .voiceInpDev {
+  margin-top: 10px;
+  margin-bottom: 5px;
   display: flex;
   flex-direction: column;
-  position: relative;
-  width: 500px;
+}
+
+.voiceInpLabel {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.selectVoiceInput {
+  width: 71%;
+}
+
+.voiceOutDev {
+  margin-top: 10px;
+  margin-bottom: 3px;
+  display: flex;
+  flex-direction: column;
+}
+
+.voiceOutLabel {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.volumeSliderContainer {
+  display: flex;
+}
+
+.volumeSlider {
+  height: 80px;
+  width: 250px;
+  margin-top: 30px;
+  margin-right: 55px;
+  padding-left: 10px;
+  background-color: rgba(110, 100, 100, 0.2);
+}
+
+.volumeHeader {
+  font-weight: 300;
+}
+
+.volumeRange {
+  width: 230px;
+}
+
+.myMicrophone {
+  margin: 0 auto;
+  width: 80px;
 }
