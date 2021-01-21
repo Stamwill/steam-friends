@@ -1,5 +1,6 @@
 import * as React from 'react'
 import VoiceTransmission from './partials/VoiceTransmission'
+import VoiceThreshold from './partials/VoiceThreshold'
 import classes from './VoiceSettings.module.css'
 
 const VoiceSettings = React.forwardRef(function VoiceSettings(props, ref) {
@@ -45,7 +46,7 @@ const VoiceSettings = React.forwardRef(function VoiceSettings(props, ref) {
       </div>
 
       <VoiceTransmission />
-
+      <VoiceThreshold />
     </div>
   )
 })
