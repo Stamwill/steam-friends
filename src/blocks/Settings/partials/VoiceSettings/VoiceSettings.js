@@ -1,4 +1,5 @@
 import * as React from 'react'
+import VoiceTransmission from './partials/VoiceTransmission'
 import classes from './VoiceSettings.module.css'
 
 const VoiceSettings = React.forwardRef(function VoiceSettings(props, ref) {
@@ -42,6 +43,8 @@ const VoiceSettings = React.forwardRef(function VoiceSettings(props, ref) {
           <p className={classes.myMicrophone}>(My friends)</p>
         </div>
       </div>
+
+      <VoiceTransmission />
 
     </div>
   )
