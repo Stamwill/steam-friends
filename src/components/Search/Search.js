@@ -15,7 +15,12 @@ const Search = React.forwardRef(function Search(props, ref) {
       </label>
 
         <div className={classes.searchField}>
-          <input className={classes.searchInput} type="search" name="friends" placeholder="search friends" onChange={handleSearch}/>
+          <input 
+            className={classes.searchInput} 
+            type="search" name="friends" 
+            placeholder="search friends" 
+            onChange={handleSearch}
+          />
           <AiOutlineSearch className={classes.magnifying}/>
         </div>
 
