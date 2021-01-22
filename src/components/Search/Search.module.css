@@ -26,6 +26,7 @@
   opacity: 0;
   transition: 0.5s;
   background-color: #686a76;
+  color: white;
   border: none;
   border-radius: 2px;
 }
