@@ -22,10 +22,7 @@ export const friends = [
   {
     userName: "npahlfer",
     userStatus: "Online",
-  }
-]
-
-export const offline = [
+  },
   {
     userName: "maeertin",
     userStatus: "Last online 3 months ago",
