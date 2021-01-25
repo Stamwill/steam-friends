@@ -75,9 +75,11 @@
 }
 
 .volumeRange {
-  width: 170px;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .userMic {
+  text-align: center;
   margin: 0 auto;
 }
