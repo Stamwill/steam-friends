@@ -31,3 +31,10 @@
 .heading {
   margin: 0;
 }
+
+@media screen and (max-width: 700) {
+  .optionContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
