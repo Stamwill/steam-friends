@@ -9,18 +9,17 @@
 .inputHeaders {
   display: flex;
   align-items: center;
-  margin-right: 100px;
 }
 
 .friendNotification {
   margin-left: 0;
-  margin-right: 200px;
+  margin-right: 24vw;
   font-weight: 400;
   font-size: 15px;
 }
 
 .showNotification {
-  margin-right: 70px;
+  margin-right: 6vw;
   color: rgba(110, 100, 100, 1);
 }
 
@@ -34,7 +33,7 @@
 }
 
 .button {
-  width: 200px;
+  width: 165px;
   margin-left: 0;
   margin-right: 10px;
   border: none;
