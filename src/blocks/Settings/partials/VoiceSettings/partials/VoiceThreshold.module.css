@@ -1,4 +1,5 @@
 .root {
+  width: 100%;
 }
 
 .header {
@@ -10,7 +11,6 @@
   display: flex;
   margin-bottom: 50px;
   height: 50px;
-  width: 530px;
   padding: 5px;
   background-color: rgba(20, 20, 50, 1);
 }
@@ -21,7 +21,7 @@
   justify-content: center;
   align-items: center;
   height: 50px;
-  width: 178px;
+  width: 100%;
   background-color: rgba(20, 20, 50, 1);
   transition: 0.3s;
 }

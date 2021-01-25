@@ -1,7 +1,6 @@
 .root {
   margin-top: 20px;
   height: 150px;
-  width: 51.5%;
   border: 1px solid gray;
 }
 
@@ -12,7 +11,7 @@
 
 .button {
   background-color: rgba(0, 60, 60, 0.1);
-  width: 32%;
+  width: 31%;
   margin: 3px;
   border-radius: 2px;
 }

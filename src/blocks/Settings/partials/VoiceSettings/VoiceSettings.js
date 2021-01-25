@@ -35,13 +35,13 @@ const VoiceSettings = React.forwardRef(function VoiceSettings(props, ref) {
         <div className={classes.volumeSlider}>
           <h3 className={classes.volumeHeader}>Input volume/gain</h3>
           <input className={classes.volumeRange} type="range" />
-          <p className={classes.myMicrophone}>(My microphone)</p>
+          <p className={classes.userMic}>(My microphone)</p>
         </div>
 
         <div className={classes.volumeSlider}>
           <h3 className={classes.volumeHeader}>Output volume/gain</h3>
           <input className={classes.volumeRange} type="range" />
-          <p className={classes.myMicrophone}>(My friends)</p>
+          <p className={classes.userMic}>(My friends)</p>
         </div>
       </div>
 
