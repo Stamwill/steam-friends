@@ -48,6 +48,10 @@
   background: linear-gradient(to right, rgba(40, 42, 50, 1) 0%, rgba(27, 40, 56, 1) 26%);
 }
 
+.rightBox {
+  width: 70vw;
+}
+
 .rightHeader {
   display: flex;
 }
@@ -55,7 +59,6 @@
 .cross {
   position: relative;
   float: right;
-  right: 80px;
   top: 35px;
   height: 20px;
   width: 20px;

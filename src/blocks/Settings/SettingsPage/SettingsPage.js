@@ -47,12 +47,14 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
       </div>
 
       <div className={classes.rightContainer}>
+        <div className={classes.rightBox}>
           <AiFillCloseCircle className={classes.cross} onClick={onClose} />
           { pageIndex === 0 && <FriendSettings friendOptions={friendOptions} /> }
           { pageIndex === 1 && <ChatSettings chatOptions={chatOptions} /> }
           { pageIndex === 2 && <SizeSettings sizeOptions={sizeOptions}/> }
           { pageIndex === 3 && <NotificationSettings notificationOptions={notificationOptions}/> }
           { pageIndex === 4 && <VoiceSettings /> }
+        </div>
       </div>
     </div>
   )
