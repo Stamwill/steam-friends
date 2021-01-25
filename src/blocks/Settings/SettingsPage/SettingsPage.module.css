@@ -88,3 +88,9 @@
 .onOffButtons {
   margin-left: auto;
 }
+
+@media screen and (max-width: 800px) {
+  .rightBox {
+    width: 60vw;
+  }
+}
