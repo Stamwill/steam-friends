@@ -36,3 +36,15 @@
     width: 100px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .buttonContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button {
+    margin-top: 5px;
+    width: 110px;
+  }
+}
