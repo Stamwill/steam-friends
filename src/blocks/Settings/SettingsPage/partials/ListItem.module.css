@@ -4,10 +4,6 @@
   font-size: 15px;
 }
 
-.title {
-  font-size: 30px;
-}
-
 .settingTitle:hover {
   color: white;
   cursor: pointer;
@@ -15,4 +11,10 @@
 
 .open {
   display: block;
+}
+
+@media screen and (max-width: 700px) {
+  .settingTitle {
+    font-size: 10px;
+  }
 }
