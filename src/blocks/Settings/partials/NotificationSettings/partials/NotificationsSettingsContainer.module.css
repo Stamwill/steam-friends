@@ -26,3 +26,13 @@
     font-size: 12px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .option {
+    width: 40%;
+  }
+
+  .secondCheck {
+    margin-left: 15vw;
+  }
+}
