@@ -13,6 +13,7 @@
 .open {
   display: grid;
   grid-template-columns: 200px 1fr;
+  height: 100vw;
 }
 
 .leftContainer {
@@ -106,5 +107,11 @@
 
   .settings {
     font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .rightContainer {
+    padding-left: 10px;
   }
 }
