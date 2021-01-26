@@ -119,7 +119,12 @@
     font-size: 10px;
   }
   .muteToggle {
-    align-items: center;
-    justify-content: center;
+    align-items: baseline;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .soundOn {
+    padding: 10px;
   }
 }
