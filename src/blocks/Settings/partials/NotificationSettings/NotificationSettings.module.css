@@ -49,6 +49,15 @@
   opacity: 1;
 }
 
+@media screen and (max-width: 1000px) {
+  .friendNotification {
+    margin-right: 15vw;
+  }
+
+  .playSound {
+  }
+}
+
 @media screen and (max-width: 800px) {
   .button {
     width: 33vw;
