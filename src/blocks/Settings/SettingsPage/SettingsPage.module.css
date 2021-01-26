@@ -94,3 +94,17 @@
     width: 60vw;
   }
 }
+
+@media screen and (max-width: 700px) {
+  .open {
+    grid-template-columns: 100px 1fr;
+  }
+
+  .leftContainer {
+    padding-left: 0;
+  }
+
+  .settings {
+    font-size: 12px;
+  }
+}
