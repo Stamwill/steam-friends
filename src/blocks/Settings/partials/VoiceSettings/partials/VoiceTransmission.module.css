@@ -97,3 +97,29 @@
 .soundCheck:checked + .slider:before {
   transform: translateX(26px);
 }
+
+@media screen and (max-width: 600px) {
+  .muteP {
+    margin-top: 0;
+    font-size: 10px;
+  }
+  .soundP {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .button {
+    width: 30%;
+    font-size: 10px;
+  }
+  .muteToggle {
+    align-items: center;
+    justify-content: center;
+  }
+}
