@@ -38,7 +38,6 @@ function App() {
     setSettingsOpen((prevState) => !prevState)
   }
 
-
   return (
     <div className="App">
       <Topbar onToggleSettings={handleToggleSettings}/>
@@ -65,10 +64,8 @@ function App() {
       <h2 className={classes.offlineFriends}>Offline Friends</h2>
 
       <OfflineList offlines={offlineFriends} />
-}
     </div>
   )
 }
-
 
 export default App
