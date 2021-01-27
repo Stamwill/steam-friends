@@ -39,6 +39,10 @@
 }
 
 @media screen and (max-width: 600px) {
+  .header {
+    font-size: 20px;
+  }
+
   .buttonContainer {
     display: flex;
     flex-direction: column;
