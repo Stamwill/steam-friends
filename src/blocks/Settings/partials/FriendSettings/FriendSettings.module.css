@@ -31,3 +31,9 @@
 .onOffButtons {
   margin-left: auto;
 }
+
+@media screen and (max-width: 600px) {
+  .header {
+    font-size: 20px;
+  }
+}
