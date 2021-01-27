@@ -28,8 +28,6 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
     setPageIndex(idx)
   }
 
-
-
   return (
     <div className={classnames(classes.root, {[classes.open]: open} )} ref={ref}>
       <div className={classes.leftContainer}>
