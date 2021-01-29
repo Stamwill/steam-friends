@@ -5,14 +5,17 @@ import classes from './SettingOptionsContainer.module.css'
 
 const SettingOptionsContainer = React.forwardRef(function SettingOptionsContainer(props, ref) {
 
-  const { friendOptions } = props
+  const { friendOptions, isOn, isOff, handleClick} = props
+
 
   return (
     <div className={classes.root} ref={ref}>
        <div className={classes.optionContainer}>
          <h2 className={classes.option}>{friendOptions.option}</h2>
           <div className={classes.onOffButtons}>
-            <OnOffButton />
+            <OnOffButton isOn={isOn}
+            isOff={isOff}  
+            handleClick={handleClick}/>
           </div>
         </div>
     </div>
