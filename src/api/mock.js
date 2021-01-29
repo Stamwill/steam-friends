@@ -30,6 +30,22 @@ export const friends = [
   {
     userName: "Peter",
     userStatus: "Last online 14 hours ago",
+  },
+  {
+    userName: "Stamboya",
+    userStatus: "Last online 1 hour ago"
+  },
+  {
+    userName: "Trobbel",
+    userStatus: "Away"
+  },
+  {
+    userName: "Bipolar bear",
+    userStatus: "Last online 7 hours ago",
+  },
+  {
+    userName: "Thumbscrew",
+    userStatus: "Online"
   }
 ]
 
