@@ -12,7 +12,6 @@ const OnOffButton = React.forwardRef(function OnOffButton(props, ref) {
     setIsOff((prevState) => !prevState)
   }
 
-
   return (
     <div className={classnames(classes.root)} ref={ref} >
       <div className={classes.buttons} onClick={handleClick}>
