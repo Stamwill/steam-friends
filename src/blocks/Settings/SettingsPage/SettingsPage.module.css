@@ -52,13 +52,9 @@
   width: 70vw;
 }
 
-.rightHeader {
-  display: flex;
-}
-
 .cross {
   position: relative;
-  float: right;
+  left: 95%;
   top: 35px;
   height: 20px;
   width: 20px;
@@ -68,30 +64,9 @@
   cursor: pointer;
 }
 
-.header {
-  font-size: 35px;
-}
-
-.rightOption {
-  display: flex;
-  background-color: #404040;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
-  width: 90%;
-}
-
-.heading {
-  margin: 0;
-}
-
-.onOffButtons {
-  margin-left: auto;
-}
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .rightBox {
-    width: 60vw;
+    width: 55vw;
   }
 }
 
