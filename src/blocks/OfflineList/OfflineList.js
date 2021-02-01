@@ -8,6 +8,7 @@ const OfflineList = React.forwardRef(function OfflineList(props, ref) {
   const { offlines, className, ...other } = props
 
   const [toggleState, setToggleState] = React.useState(undefined)
+  const myRef = React.useRef()
 
   const toggleOption = (idx) => () => {
     if (idx === toggleState) {
@@ -17,10 +18,16 @@ const OfflineList = React.forwardRef(function OfflineList(props, ref) {
     }
   }
 
-  
-  const mouseLeave = () => {
-    setToggleState(undefined)
+  const closeOptions = (e) => {
+    if (!myRef.current.contains(e.target)) {
+      setToggleState(undefined)
+    }
   }
+
+  React.useEffect(() => {
+    document.addEventListener('mousedown', closeOptions);
+    return () => document.removeEventListener('mousedown', closeOptions)
+  })
 
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
@@ -31,7 +38,7 @@ const OfflineList = React.forwardRef(function OfflineList(props, ref) {
               offlines={offline} 
               toggleOption={toggleOption(idx)}  
               open={idx === toggleState}
-              onMouseLeave={mouseLeave}
+              ref={myRef}
             />
           ))}
         </div>
