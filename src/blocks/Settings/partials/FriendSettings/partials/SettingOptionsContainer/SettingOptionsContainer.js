@@ -24,6 +24,9 @@ const SettingOptionsContainer = React.forwardRef(function SettingOptionsContaine
 
 SettingOptionsContainer.propTypes = {
   friendOptions: PropTypes.object,
+  isOn: PropTypes.bool,
+  isOff: PropTypes.bool,
+  handleClick: PropTypes.func,
 }
 
 export default SettingOptionsContainer
