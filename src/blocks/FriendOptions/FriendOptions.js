@@ -7,7 +7,7 @@ const FriendOptions = React.forwardRef(function FriendOptions(props, ref) {
   const { open, ...other } = props
   
   return (
-    <div className={classnames(classes.root,{ [ classes.open ]: open } )} {...other}>
+    <div className={classnames(classes.root,{ [ classes.open ]: open } )} {...other} ref={ref}>
       <div className={classes.optionList}>
         <h3 className={classes.option}>Send Message</h3>
           <hr />
