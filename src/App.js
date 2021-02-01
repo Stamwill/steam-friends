@@ -46,7 +46,6 @@ function App() {
       <SettingsPage 
         open={settingsOpen} 
         onClose={handleToggleSettings} 
-
         listSettings={api.listSettings}
         friendOptions={api.friendOptionList}
         chatOptions={api.chatOptionList}
