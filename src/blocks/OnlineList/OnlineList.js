@@ -8,7 +8,8 @@ const OnlineList = React.forwardRef(function OnlineList(props, ref) {
   const { friends, className, ...other } = props
 
     const [toggleState, setToggleState] = React.useState(undefined)
-  
+    const myRef = React.useRef()
+
     const toggleOption = (idx) => () => {
       if (idx === toggleState) {
         setToggleState(undefined)
@@ -17,9 +18,16 @@ const OnlineList = React.forwardRef(function OnlineList(props, ref) {
       }
     }
 
-    const mouseLeave = () => {
-      setToggleState(undefined)
+    const closeOptions = (e) => {
+      if (!myRef.current.contains(e.target)) {
+        setToggleState(undefined)
+      }
     }
+
+    React.useEffect(() => {
+      document.addEventListener('mousedown', closeOptions);
+      return () => document.removeEventListener('mousedown', closeOptions)
+    })
   
   return (
     <article className={classnames(classes.root, className)} ref={ref} {...other}>
@@ -31,7 +39,7 @@ const OnlineList = React.forwardRef(function OnlineList(props, ref) {
               friends={friend}  
               toggleOption={toggleOption(idx)}
               open={idx === toggleState}
-              onMouseLeave={mouseLeave}
+              ref={myRef}
             />
           ))}
         </div>
