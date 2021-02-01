@@ -10,7 +10,7 @@ const Topbar = React.forwardRef(function Topbar(props, ref) {
   const { onToggleSettings, className, ...other } = props
 
   const [ toggleState, setToggleState ] = React.useState(false)
-
+  
   const toggleUserOption = () => {
     if (toggleState) {
       setToggleState(false)
@@ -32,11 +32,11 @@ const Topbar = React.forwardRef(function Topbar(props, ref) {
           alt="profile"
         />
 
-        <div className={classes.userContainer} onMouseLeave={onMouseLeave}>
-          <div className={classes.userAndArrow}>
+        <div className={classes.userContainer} >
+          <div className={classes.userAndArrow} >
             <h4 className={classes.userName}> Cyndraz </h4>
             
-            <UserArrow toggleUserOption={toggleUserOption}/>
+            <UserArrow toggleUserOption={toggleUserOption} />
             <UserOption open={toggleState} onMouseLeave={onMouseLeave}/>
           </div>
 
