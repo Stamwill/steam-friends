@@ -54,8 +54,8 @@
 
 .cross {
   position: relative;
-  left: 95%;
-  top: 35px;
+  left: 98%;
+  top: 8vh;
   height: 20px;
   width: 20px;
 }
@@ -88,10 +88,20 @@
   .rightContainer {
     padding-left: 10px;
   }
+
+  .cross {
+    top: 5vh;
+    left: 95%;
+  }
 }
 
 @media screen and (max-width: 400px) {
   .rightContainer {
     padding-left: 5px;
+  }
+
+  .cross {
+    top: 4vh;
+    left: 90%;
   }
 }
