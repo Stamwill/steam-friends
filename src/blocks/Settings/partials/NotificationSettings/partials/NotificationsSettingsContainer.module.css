@@ -36,3 +36,9 @@
     margin-left: 15vw;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .option {
+    font-size: 8px;
+  }
+}
