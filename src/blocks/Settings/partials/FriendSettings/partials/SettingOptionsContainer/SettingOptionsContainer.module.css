@@ -31,3 +31,9 @@
     font-size: 12px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .option {
+    font-size: 8px;
+  }
+}
