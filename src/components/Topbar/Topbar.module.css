@@ -1,5 +1,8 @@
-.main {
+.root {
   background: linear-gradient(90deg, rgba(42, 71, 94, 1) 0%, rgba(27, 40, 56, 1) 65%);
+}
+
+.main {
   height: 4rem;
   display: flex;
 }
@@ -34,6 +37,7 @@
 }
 
 .settings {
+  position: relative;
   margin-left: auto;
   margin-top: auto;
   padding-right: 10px;
