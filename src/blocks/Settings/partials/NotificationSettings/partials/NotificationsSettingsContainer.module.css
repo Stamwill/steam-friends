@@ -7,14 +7,18 @@
 }
 
 .option {
-  width: 55%;
+  width: 50%;
   font-weight: 300;
   margin: 0;
   padding: 10px;
 }
 
+.firstCheck {
+  margin-left: 5vw;
+}
+
 .secondCheck {
-  margin-left: 15vw;
+  margin-left: 10vw;
 }
 
 .heading {
@@ -40,5 +44,9 @@
 @media screen and (max-width: 400px) {
   .option {
     font-size: 8px;
+  }
+
+  .secondCheck {
+    margin-left: 10vw;
   }
 }
