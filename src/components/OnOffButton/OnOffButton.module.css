@@ -47,6 +47,12 @@ button:hover {
   }
 }
 
+@media screen and (max-width: 400px) {
+  button {
+    padding: 2px 3px;
+  }
+}
+
 .open {
   background-color: rgba(25, 151, 204, 1);
 }
