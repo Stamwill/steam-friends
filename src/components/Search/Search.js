@@ -10,9 +10,10 @@ const Search = React.forwardRef(function Search(props, ref) {
 
   return (
     <div className={classnames(classes.root, className)} ref={ref} {...other}>
-      <label className={classes.searchLabel} name="friends">
-        Friends
-      </label>
+      
+        <label className={classes.searchLabel} name="friends">
+          Friends
+        </label>
 
         <div className={classes.searchField}>
           <input 
@@ -27,8 +28,8 @@ const Search = React.forwardRef(function Search(props, ref) {
         <div className={classes.searchIcons}>
           <HiUserAdd className={classes.add}/>
         </div>
-
-    </div>
+      </div>
+ 
   )
 })
 
