@@ -14,7 +14,7 @@
 
 .searchField {
   display: flex;
-  width: 90%;
+  width: 90vw;
 }
 
 .searchInput {
@@ -49,6 +49,7 @@ input:focus {
 
 .searchIcons {
   display: flex;
+  margin-left: auto;
 }
 
 .magnifying {
@@ -61,9 +62,10 @@ input:focus {
 }
 
 .add {
+  position: relative;
+  right: 10px;
   height: 20px;
   width: 20px;
   align-self: center;
-  padding-right: 10px;
   color: lightgray;
 }
