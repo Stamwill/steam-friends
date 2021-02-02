@@ -82,3 +82,9 @@
     font-size: 8px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .header {
+    font-size: 12px;
+  }
+}
