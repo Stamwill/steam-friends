@@ -49,7 +49,8 @@
 }
 
 .rightBox {
-  width: 70vw;
+  margin: 0 auto;
+  width: 50vw;
 }
 
 .cross {
