@@ -14,7 +14,7 @@
 
 .friendNotification {
   margin-left: 0;
-  margin-right: 24vw;
+  margin-right: 20vw;
   font-weight: 400;
   font-size: 15px;
 }
@@ -50,6 +50,24 @@
   opacity: 1;
 }
 
+@media screen and (max-width: 1800px) {
+  .showNotification {
+    margin-right: 5vw;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .friendNotification {
+    margin-right: 17vw;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .friendNotification {
+    margin-right: 15vw;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .friendNotification {
     margin-right: 15vw;
@@ -81,10 +99,26 @@
   .playSound {
     font-size: 8px;
   }
+
+  .chatMessageHeader {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 400px) {
   .header {
     font-size: 12px;
+  }
+
+  .friendNotification {
+    font-size: 8px;
+  }
+
+  .showNotification {
+    font-size: 5px;
+  }
+
+  .playSound {
+    font-size: 5px;
   }
 }
