@@ -21,7 +21,7 @@
   justify-content: center;
   align-items: center;
   height: 50px;
-  width: 100%;
+  width: 25vw;
   background-color: rgba(20, 20, 50, 1);
   transition: 0.3s;
 }
@@ -35,5 +35,9 @@
   .button {
     font-size: 10px;
     width: 40%;
+  }
+
+  .recommended {
+    display: none;
   }
 }
