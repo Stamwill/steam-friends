@@ -12,10 +12,6 @@ export const friends = [
     userStatus: "Online",
   },
   {
-    userName: "Cyndraz",
-    userStatus: "Online",
-  },
-  {
     userName: "Roger Moo",
     userStatus: "Online",
   },
