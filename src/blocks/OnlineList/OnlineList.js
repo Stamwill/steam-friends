@@ -7,27 +7,19 @@ import classes from './OnlineList.module.css'
 const OnlineList = React.forwardRef(function OnlineList(props, ref) {
   const { friends, className, ...other } = props
 
-    const [toggleState, setToggleState] = React.useState(undefined)
-    const myRef = React.useRef()
+  const [toggleState, setToggleState] = React.useState(undefined)
 
-    const toggleOption = (idx) => () => {
-      if (idx === toggleState) {
-        setToggleState(undefined)
-      } else {
-        setToggleState(idx)
-      }
+  const toggleOption = (idx) => () => {
+    if (idx === toggleState) {
+      setToggleState(undefined)
+    } else {
+      setToggleState(idx)
     }
+  }
 
-    const closeOptions = (e) => {
-      if (!myRef.current.contains(e.target)) {
-        setToggleState(undefined)
-      }
-    }
-
-    React.useEffect(() => {
-      document.addEventListener('mousedown', closeOptions);
-      return () => document.removeEventListener('mousedown', closeOptions)
-    })
+  const mouseLeave = () => {
+    setToggleState(undefined)
+  }  
   
   return (
     <article className={classnames(classes.root, className)} ref={ref} {...other}>
@@ -39,7 +31,7 @@ const OnlineList = React.forwardRef(function OnlineList(props, ref) {
               friends={friend}  
               toggleOption={toggleOption(idx)}
               open={idx === toggleState}
-              ref={myRef}
+              mouseLeave={mouseLeave}
             />
           ))}
         </div>
