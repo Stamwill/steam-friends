@@ -41,7 +41,7 @@ function App() {
   return (
     <div className="App">
       <Topbar onToggleSettings={handleToggleSettings}/>
-      <Search handleSearch={handleSearch}/>
+      <Search handleSearch={handleSearch} />
 
       <SettingsPage 
         open={settingsOpen} 
