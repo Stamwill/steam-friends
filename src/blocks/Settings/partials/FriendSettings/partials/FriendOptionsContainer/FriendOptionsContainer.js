@@ -1,9 +1,9 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import OnOffButton from '../../../../../../components/OnOffButton'
-import classes from './SettingOptionsContainer.module.css'
+import classes from './FriendOptionsContainer.module.css'
 
-const SettingOptionsContainer = React.forwardRef(function SettingOptionsContainer(props, ref) {
+const FriendOptionsContainer = React.forwardRef(function FriendOptionsContainer(props, ref) {
 
   const { friendOptions } = props
   
@@ -19,8 +19,8 @@ const SettingOptionsContainer = React.forwardRef(function SettingOptionsContaine
   )
 })
 
-SettingOptionsContainer.propTypes = {
+FriendOptionsContainer.propTypes = {
   friendOptions: PropTypes.object,
 }
 
-export default SettingOptionsContainer
+export default FriendOptionsContainer
