@@ -1,6 +1,6 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
-import SettingOptionsContainer from './partials/SettingOptionsContainer'
+import FriendOptionsContainer from './partials/FriendOptionsContainer'
 import classes from './FriendSettings.module.css'
 
 
@@ -16,7 +16,7 @@ const FriendSettings = React.forwardRef(function FriendSettings(props, ref) {
 
       <div className={classes.rightContainer}>
         {friendOptions.map((option, idx) => (
-          <SettingOptionsContainer 
+          <FriendOptionsContainer 
             key={idx}
             friendOptions={option}
           />
