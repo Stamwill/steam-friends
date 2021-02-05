@@ -7,6 +7,7 @@ const ChatOptionsContainer = React.forwardRef(function ChatOptionsContainer(prop
 
   const { chatOptions } = props
 
+
   return (
     <div className={classes.root} ref={ref}>
        <div className={classes.optionContainer}>
