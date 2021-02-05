@@ -1,17 +1,10 @@
 import * as React from 'react'
 import classnames from 'clsx'
+import PropTypes from 'prop-types'
 import classes from './OnOffButton.module.css'
 
 const OnOffButton = React.forwardRef(function OnOffButton(props, ref) {
-
-  const [isOn, setIsOn] = React.useState(false)
-  const [isOff, setIsOff] = React.useState(true)
-
-  const handleClick = () => {
-    setIsOn((prevState) => !prevState)
-    setIsOff((prevState) => !prevState)
-  }
-
+  const { isOn, isOff, handleClick } = props
   return (
     <div className={classnames(classes.root)} ref={ref} >
       <div className={classes.buttons} onClick={handleClick}>
@@ -21,5 +14,11 @@ const OnOffButton = React.forwardRef(function OnOffButton(props, ref) {
     </div>
   )
 })
+
+OnOffButton.propTypes = {
+  isOn: PropTypes.bool,
+  isOff: PropTypes.bool,
+  handleClick: PropTypes.func,
+}
 
 export default OnOffButton
