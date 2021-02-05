@@ -6,7 +6,7 @@ import classes from './FriendSettings.module.css'
 
 const FriendSettings = React.forwardRef(function FriendSettings(props, ref) {
 
-  const { friendOptions } = props
+  const { friendOptions, isOn, isOff, handleClick } = props
 
   return (
     <div className={classes.root} ref={ref}>
@@ -19,6 +19,9 @@ const FriendSettings = React.forwardRef(function FriendSettings(props, ref) {
           <FriendOptionsContainer 
             key={idx}
             friendOptions={option}
+            isOn={isOn}
+            isOff={isOff}
+            handleClick={handleClick}
           />
         ) 
         )}
