@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 import classes from './OnOffButton.module.css'
 
 const OnOffButton = React.forwardRef(function OnOffButton(props, ref) {
-  const { isOn, isOff, handleClick } = props
+  const { isOn, handleClick } = props
   return (
     <div className={classnames(classes.root)} ref={ref} >
       <div className={classes.buttons} onClick={handleClick}>
-        <button className={classnames(classes.buttonOff, {[classes.off]: isOff})} type="submit">Off</button>
+        <button className={classnames(classes.buttonOff, {[classes.off]: !isOn})} type="submit">Off</button>
         <button className={classnames(classes.buttonOn, {[classes.open]: isOn})} type="submit">On</button>
       </div>
     </div>
