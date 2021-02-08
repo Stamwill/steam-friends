@@ -1,6 +1,6 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
-import OnOffButton from '../../../../../../components/OnOffButton'
+import classnames from 'clsx'
 import classes from './FriendOptionsContainer.module.css'
 
 const FriendOptionsContainer = React.forwardRef(function FriendOptionsContainer(props, ref) {
@@ -11,8 +11,9 @@ const FriendOptionsContainer = React.forwardRef(function FriendOptionsContainer(
     <div className={classes.root} ref={ref}>
        <div className={classes.optionContainer}>
          <h2 className={classes.option}>{friendOptions.option}</h2>
-          <div className={classes.onOffButtons}>
-            <OnOffButton isOn={isOn} handleClick={handleClick}/>
+          <div className={classes.onOffButtons} onClick={handleClick}>
+            <button className={classnames(classes.buttonOff, {[classes.off]: !isOn})} type="submit">Off</button>
+            <button className={classnames(classes.buttonOn, {[classes.open]: isOn})} type="submit">On</button>
           </div>
         </div>
     </div>
