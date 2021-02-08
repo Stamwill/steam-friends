@@ -27,6 +27,38 @@
 
 .onOffButtons {
   margin-left: auto;
+  padding: 5px;
+}
+
+button {
+  border: none;
+  display: inline-block;
+  background-color: rgba(108, 122, 137, 0.2);
+  color: white;
+  padding: 7px 20px;
+  outline: none;
+}
+
+.buttonOff {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.buttonOn {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.open {
+  background-color: rgba(25, 151, 204, 1);
+}
+
+.off {
+  background-color: rgba(108, 122, 137, 0.5);
 }
 
 .heading {
@@ -37,6 +69,21 @@
   .option {
     font-size: 12px;
   }
+  .onOffButtons {
+    width: 80px;
+  }
+  button {
+    padding: 4px 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .onOffButtons {
+    width: 60px;
+  }
+  button {
+    padding: 4px 5px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -46,10 +93,12 @@
 }
 
 @media screen and (max-width: 400px) {
+  button {
+    padding: 2px 3px;
+  }
   .option {
     font-size: 8px;
   }
-
   .info {
     font-size: 7px;
   }
