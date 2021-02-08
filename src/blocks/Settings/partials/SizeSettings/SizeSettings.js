@@ -5,7 +5,7 @@ import classes from './SizeSettings.module.css'
 
 const SizeScaleSettings = React.forwardRef(function SizeScaleSettings(props, ref) {
 
-  const { sizeOptions } = props
+  const { sizeOptions, sizeState, handleSize,  } = props
 
   return (
     <div className={classes.root} ref={ref}>
@@ -14,6 +14,9 @@ const SizeScaleSettings = React.forwardRef(function SizeScaleSettings(props, ref
         <SizeScaleOptionsContainer 
           key={idx}
           sizeOptions={option}
+          isOn={sizeState[idx] === 'on'}
+          isOff={sizeState[idx] === 'off'}
+          handleSize={handleSize(idx)}
         />
       ))}
 
@@ -29,6 +32,8 @@ const SizeScaleSettings = React.forwardRef(function SizeScaleSettings(props, ref
 
 SizeScaleSettings.propTypes = {
   sizeOptions: PropTypes.array,
+  sizeState: PropTypes.array,
+  handleSize: PropTypes.func,
 }
 
 export default SizeScaleSettings
