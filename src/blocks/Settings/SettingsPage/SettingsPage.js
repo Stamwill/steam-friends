@@ -42,6 +42,36 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
     })
   }
 
+  const [chatState, setChatState] = React.useState(
+    chatOptions.reduce((acc, cur) => {
+      return [...acc, 'off']
+    },[ ])
+  )
+
+  const handleChat = (idx) => () => {
+    setChatState((prevState) => {
+      const newState = [...prevState]
+      newState[idx] = newState[idx] === 'off' ? 'on' : 'off'
+      return newState
+    })
+  }
+
+  const [sizeState, setSizeState] = React.useState(
+    sizeOptions.reduce((acc, cur) => {
+      return [...acc, 'off']
+    },[ ])
+  )
+
+  const handleSize = (idx) => () => {
+    setSizeState((prevState) => {
+      const newState = [...prevState]
+      newState[idx] = newState[idx] === 'off' ? 'on' : 'off'
+      return newState
+    })
+  }
+
+
+
   return (
     <div className={classnames(classes.root, {[classes.open]: open} )} ref={ref}>
       <div className={classes.leftContainer}>
@@ -69,10 +99,14 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
           
           { pageIndex === 1 && <ChatSettings 
             chatOptions={chatOptions}
+            chatState={chatState}
+            handleChat={handleChat}
           /> }
 
           { pageIndex === 2 && <SizeSettings 
             sizeOptions={sizeOptions}
+            sizeState={sizeState}
+            handleSize={handleSize}
           /> }
 
           { pageIndex === 3 && <NotificationSettings 
