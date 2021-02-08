@@ -32,6 +32,8 @@ const FriendSettings = React.forwardRef(function FriendSettings(props, ref) {
 
 FriendSettings.propTypes = {
   friendOptions: PropTypes.array,
+  buttonState: PropTypes.array,
+  handleClick: PropTypes.func,
 }
 
 export default FriendSettings
