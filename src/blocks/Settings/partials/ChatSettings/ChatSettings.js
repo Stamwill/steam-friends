@@ -4,7 +4,7 @@ import ChatOptionsContainer from './partials/ChatOptionsContainer'
 import classes from './ChatSettings.module.css'
 
 const ChatSettings = React.forwardRef(function ChatSettings(props, ref) {
-  const { chatOptions } = props
+  const { chatOptions, handleChat, chatState } = props
 
   return (
     <div className={classes.root} ref={ref} >
@@ -13,6 +13,9 @@ const ChatSettings = React.forwardRef(function ChatSettings(props, ref) {
         <ChatOptionsContainer 
         key={idx}
         chatOptions={option}
+        isOn={chatState[idx] === 'on' }
+        isOff={chatState[idx] === 'off' }
+        handleChat={handleChat(idx)}
         />
       ))}
     </div>
@@ -20,7 +23,9 @@ const ChatSettings = React.forwardRef(function ChatSettings(props, ref) {
 })
 
 ChatSettings.propTypes = {
-  chatOptions: PropTypes.array
+  chatOptions: PropTypes.array,
+  handleChat: PropTypes.func,
+  chatState: PropTypes.array
 }
 
 export default ChatSettings
