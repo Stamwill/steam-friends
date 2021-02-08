@@ -28,14 +28,19 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
     setPageIndex(idx)
   }
 
-  const [isOn, setIsOn] = React.useState(false)
-  const [isOff, setIsOff] = React.useState(true)
+  const [buttonState, setbuttonState] = React.useState(
+    friendOptions.reduce((acc, cur) => {
+      return [...acc, 'off'] 
+    },[ ])
+  )  
 
-  const handleClick = () => {
-      setIsOn((prevState) => !prevState)
-      setIsOff((prevState) => !prevState)  
+  const handleClick = (idx) => () => {
+    setbuttonState((prevState) => {
+      const newState = [...prevState]
+      newState[idx] = newState[idx] === 'off' ? 'on' : 'off' 
+      return newState
+    })
   }
-
 
   return (
     <div className={classnames(classes.root, {[classes.open]: open} )} ref={ref}>
@@ -58,8 +63,7 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
           <AiFillCloseCircle className={classes.cross} onClick={onClose} />
           { pageIndex === 0 && <FriendSettings 
             friendOptions={friendOptions}
-            isOn={isOn}
-            isOff={isOff}
+            buttonState={buttonState}
             handleClick={handleClick}
           /> }
           
