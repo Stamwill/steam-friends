@@ -6,33 +6,13 @@ import classes from './NotificationSettings.module.css'
 
 const NotificationSettings = React.forwardRef(function NotificationSettings(props, ref) {
   
-  const { notificationOptions, alwaysBtn, miniBtn, neverBtn,
-          handleAlwaysBtn, handleMiniBtn, handleNeverBtn } = props
-
-  // const [alwaysBtn, setAlwaysBtn] = React.useState(false)
-  // const [miniBtn, setMiniBtn] = React.useState(true)
-  // const [neverBtn, setNeverBtn] = React.useState(false)
-  
-  // const handleAlwaysBtn = () => {
-  //   setAlwaysBtn(true)
-  //   setMiniBtn(false)
-  //   setNeverBtn(false)
-  // }
-
-  // const handleMiniBtn = () => {
-  //   setMiniBtn(true)
-  //   setAlwaysBtn(false)
-  //   setNeverBtn(false)
-  // }
-
-  // const handleNeverBtn = () => {
-  //   setNeverBtn(true)
-  //   setAlwaysBtn(false)
-  //   setMiniBtn(false)
-  // }
+  const { notificationOptions, 
+          alwaysBtn, miniBtn, neverBtn,
+          handleAlwaysBtn, handleMiniBtn, handleNeverBtn 
+        } = props
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} ref={ref}>
       <h2 className={classes.header}>NOTIFICATIONS</h2>
       <div className={classes.inputHeaders}>
             <h3 className={classes.friendNotification}>FRIEND NOTIFICATIONS</h3>
@@ -58,6 +38,12 @@ const NotificationSettings = React.forwardRef(function NotificationSettings(prop
 
 NotificationSettings.propTypes = {
   notificationOptions: PropTypes.array,
+  alwaysBtn: PropTypes.bool,
+  miniBtn: PropTypes.bool,
+  neverBtn: PropTypes.bool,
+  handleAlwaysBtn: PropTypes.func,
+  handleMiniBtn: PropTypes.func,
+  handleNeverBtn: PropTypes.func,
 }
 
 export default NotificationSettings
