@@ -42,8 +42,14 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
     })
   }
 
+
   const [chatState, setChatState] = React.useState(
     chatOptions.reduce((acc, cur) => {
+      return [...acc, 'off']
+    },[ ])
+  )
+  const [sizeState, setSizeState] = React.useState(
+    sizeOptions.reduce((acc, cur) => {
       return [...acc, 'off']
     },[ ])
   )
@@ -55,13 +61,6 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
       return newState
     })
   }
-
-  const [sizeState, setSizeState] = React.useState(
-    sizeOptions.reduce((acc, cur) => {
-      return [...acc, 'off']
-    },[ ])
-  )
-
   const handleSize = (idx) => () => {
     setSizeState((prevState) => {
       const newState = [...prevState]
@@ -79,13 +78,11 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
     setMiniBtn(false)
     setNeverBtn(false)
   }
-
   const handleMiniBtn = () => {
     setMiniBtn(true)
     setAlwaysBtn(false)
     setNeverBtn(false)
   }
-
   const handleNeverBtn = () => {
     setNeverBtn(true)
     setAlwaysBtn(false)
@@ -101,19 +98,36 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
     setDefaultBtn(false)
     setLargeBtn(false)
   }
-
   const handleDefaultBtn = () => {
     setDefaultBtn(true)
     setSmallBtn(false)
     setLargeBtn(false)
   }
-
   const handleLargeBtn = () => {
     setLargeBtn(true)
     setSmallBtn(false)
     setDefaultBtn(false)
   }
 
+  const [offBtn, setOffBtn] = React.useState(false)
+  const [mediumBtn, setMediumBtn] = React.useState(true)
+  const [highBtn, setHighBtn] = React.useState(false)
+
+  const handleOffBtn = () => {
+    setOffBtn(true)
+    setMediumBtn(false)
+    setHighBtn(false)
+  }
+  const handleMediumBtn = () => {
+    setMediumBtn(true)
+    setOffBtn(false)
+    setHighBtn(false)
+  }
+  const handleHighBtn = () => {
+    setHighBtn(true)
+    setOffBtn(false)
+    setMediumBtn(false)
+  }
 
   return (
     <div className={classnames(classes.root, {[classes.open]: open} )} ref={ref}>
@@ -168,7 +182,14 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
             handleNeverBtn={handleNeverBtn}
           /> }
           
-          { pageIndex === 4 && <VoiceSettings /> }
+          { pageIndex === 4 && <VoiceSettings 
+            offBtn={offBtn}
+            mediumBtn={mediumBtn}
+            highBtn={highBtn}
+            handleOffBtn={handleOffBtn}
+            handleMediumBtn={handleMediumBtn}
+            handleHighBtn={handleHighBtn}
+          /> }
         </div>
       </div>
     </div>
