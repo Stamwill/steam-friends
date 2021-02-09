@@ -50,6 +50,14 @@
   opacity: 1;
 }
 
+.active {
+  background-color: rgba(25, 151, 204, 1);
+}
+
+.active:hover {
+  background-color: rgba(25, 160, 214, 1);
+}
+
 @media screen and (max-width: 1800px) {
   .showNotification {
     margin-right: 5vw;
