@@ -1,9 +1,15 @@
 import * as React from 'react'
+import PropTypes from 'prop-types'
 import VoiceTransmission from './partials/VoiceTransmission'
 import VoiceThreshold from './partials/VoiceThreshold'
 import classes from './VoiceSettings.module.css'
 
 const VoiceSettings = React.forwardRef(function VoiceSettings(props, ref) {
+
+  const { offBtn, mediumBtn, highBtn,
+          handleOffBtn, handleMediumBtn, handleHighBtn
+  } = props
+
   return (
     <div className={classes.root} ref={ref}>
       <h1 className={classes.header}>VOICE</h1>
@@ -46,9 +52,25 @@ const VoiceSettings = React.forwardRef(function VoiceSettings(props, ref) {
       </div>
 
       <VoiceTransmission />
-      <VoiceThreshold />
+      <VoiceThreshold 
+        offBtn={offBtn} 
+        mediumBtn={mediumBtn} 
+        highBtn={highBtn}
+        handleOffBtn={handleOffBtn}
+        handleMediumBtn={handleMediumBtn}
+        handleHighBtn={handleHighBtn}
+        />
     </div>
   )
 })
+
+VoiceSettings.propTypes = {
+  offBtn: PropTypes.bool,
+  mediumBtn: PropTypes.bool,
+  highBtn: PropTypes.bool,
+  handleOffBtn: PropTypes.func,
+  handleMediumBtn: PropTypes.func,
+  handleHighBtn: PropTypes.func,
+}
 
 export default VoiceSettings
