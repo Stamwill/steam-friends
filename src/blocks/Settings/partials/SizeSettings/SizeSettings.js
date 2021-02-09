@@ -1,11 +1,34 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'clsx'
 import SizeScaleOptionsContainer from './partials'
 import classes from './SizeSettings.module.css'
 
 const SizeScaleSettings = React.forwardRef(function SizeScaleSettings(props, ref) {
 
   const { sizeOptions, sizeState, handleSize,  } = props
+
+  const [smallBtn, setSmallBtn] = React.useState(false)
+  const [defaultBtn, setDefaultBtn] = React.useState(true)
+  const [largeBtn, setLargeBtn] = React.useState(false)
+
+  const handleSmallBtn = () => {
+    setSmallBtn(true)
+    setDefaultBtn(false)
+    setLargeBtn(false)
+  }
+
+  const handleDefaultBtn = () => {
+    setDefaultBtn(true)
+    setSmallBtn(false)
+    setLargeBtn(false)
+  }
+
+  const handleLargeBtn = () => {
+    setLargeBtn(true)
+    setSmallBtn(false)
+    setDefaultBtn(false)
+  }
 
   return (
     <div className={classes.root} ref={ref}>
@@ -22,9 +45,9 @@ const SizeScaleSettings = React.forwardRef(function SizeScaleSettings(props, ref
 
       <h2 className={classes.fontSize}>CHAT FONT SIZE</h2>
       <div className={classes.buttonContainer}>
-        <button className={classes.button} type="submit">small</button>
-        <button className={classes.button} type="submit">Default</button>
-        <button className={classes.button} type="submit">Large</button>
+        <button className={classnames(classes.button, {[classes.active]: smallBtn})} onClick={handleSmallBtn} type="submit">small</button>
+        <button className={classnames(classes.button, {[classes.active]: defaultBtn})} onClick={handleDefaultBtn} type="submit">Default</button>
+        <button className={classnames(classes.button, {[classes.active]: largeBtn})} onClick={handleLargeBtn} type="submit">Large</button>
       </div>
     </div>
   )
