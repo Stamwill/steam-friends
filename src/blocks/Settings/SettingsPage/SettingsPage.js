@@ -70,8 +70,6 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
     })
   }
 
-
-
   return (
     <div className={classnames(classes.root, {[classes.open]: open} )} ref={ref}>
       <div className={classes.leftContainer}>
