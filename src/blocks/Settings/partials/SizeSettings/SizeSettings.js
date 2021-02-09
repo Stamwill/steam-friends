@@ -6,29 +6,10 @@ import classes from './SizeSettings.module.css'
 
 const SizeScaleSettings = React.forwardRef(function SizeScaleSettings(props, ref) {
 
-  const { sizeOptions, sizeState, handleSize,  } = props
-
-  const [smallBtn, setSmallBtn] = React.useState(false)
-  const [defaultBtn, setDefaultBtn] = React.useState(true)
-  const [largeBtn, setLargeBtn] = React.useState(false)
-
-  const handleSmallBtn = () => {
-    setSmallBtn(true)
-    setDefaultBtn(false)
-    setLargeBtn(false)
-  }
-
-  const handleDefaultBtn = () => {
-    setDefaultBtn(true)
-    setSmallBtn(false)
-    setLargeBtn(false)
-  }
-
-  const handleLargeBtn = () => {
-    setLargeBtn(true)
-    setSmallBtn(false)
-    setDefaultBtn(false)
-  }
+  const { sizeOptions, sizeState, handleSize,
+          smallBtn, defaultBtn, largeBtn,
+          handleSmallBtn, handleDefaultBtn, handleLargeBtn,
+  } = props
 
   return (
     <div className={classes.root} ref={ref}>
@@ -57,6 +38,12 @@ SizeScaleSettings.propTypes = {
   sizeOptions: PropTypes.array,
   sizeState: PropTypes.array,
   handleSize: PropTypes.func,
+  smallBtn: PropTypes.bool,
+  defaultBtn: PropTypes.bool,
+  largeBtn: PropTypes.bool,
+  handleSmallBtn: PropTypes.func,
+  handleDefaultBtn: PropTypes.func,
+  handleLargeBtn: PropTypes.func,
 }
 
 export default SizeScaleSettings
