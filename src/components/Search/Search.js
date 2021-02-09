@@ -8,20 +8,6 @@ import classes from './Search.module.css'
 const Search = React.forwardRef(function Search(props, ref) {
   const {  className, handleSearch, ...other } = props
 
-  const [showGlass, setShowGlass] = React.useState(false)
-
-  const test = () => {
-    console.log('test1', 'test2')
-  }
-
-  const handleGlass = () => {
-    if (showGlass) {
-      setShowGlass((prevState) => !prevState)
-      document.addEventListener('click', test )
-    } else {
-      document.addEventListener('click', test)
-    }
-  }
 
 
   return (
@@ -37,10 +23,9 @@ const Search = React.forwardRef(function Search(props, ref) {
           type="search" name="friends" 
           placeholder="search friends" 
           onChange={handleSearch}
-          onClick={handleGlass}
         />
       </div>
-        <AiOutlineSearch className={classnames(classes.magnifying, {[classes.glass]: showGlass})} />
+        <AiOutlineSearch className={classnames(classes.magnifying)} />
 
       <div className={classes.searchIcons}>
         <HiUserAdd className={classes.add}/>
