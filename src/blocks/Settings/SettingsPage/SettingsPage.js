@@ -92,6 +92,28 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
     setMiniBtn(false)
   }
 
+  const [smallBtn, setSmallBtn] = React.useState(false)
+  const [defaultBtn, setDefaultBtn] = React.useState(true)
+  const [largeBtn, setLargeBtn] = React.useState(false)
+
+  const handleSmallBtn = () => {
+    setSmallBtn(true)
+    setDefaultBtn(false)
+    setLargeBtn(false)
+  }
+
+  const handleDefaultBtn = () => {
+    setDefaultBtn(true)
+    setSmallBtn(false)
+    setLargeBtn(false)
+  }
+
+  const handleLargeBtn = () => {
+    setLargeBtn(true)
+    setSmallBtn(false)
+    setDefaultBtn(false)
+  }
+
 
   return (
     <div className={classnames(classes.root, {[classes.open]: open} )} ref={ref}>
@@ -128,6 +150,12 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
             sizeOptions={sizeOptions}
             sizeState={sizeState}
             handleSize={handleSize}
+            smallBtn={smallBtn}
+            defaultBtn={defaultBtn}
+            largeBtn={largeBtn}
+            handleSmallBtn={handleSmallBtn}
+            handleDefaultBtn={handleDefaultBtn}
+            handleLargeBtn={handleLargeBtn}
           /> }
 
           { pageIndex === 3 && <NotificationSettings 
