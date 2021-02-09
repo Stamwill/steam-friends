@@ -6,29 +6,30 @@ import classes from './NotificationSettings.module.css'
 
 const NotificationSettings = React.forwardRef(function NotificationSettings(props, ref) {
   
-  const { notificationOptions } = props
+  const { notificationOptions, alwaysBtn, miniBtn, neverBtn,
+          handleAlwaysBtn, handleMiniBtn, handleNeverBtn } = props
 
-  const [alwaysBtn, setAlwaysBtn] = React.useState(false)
-  const [miniBtn, setMiniBtn] = React.useState(true)
-  const [neverBtn, setNeverBtn] = React.useState(false)
+  // const [alwaysBtn, setAlwaysBtn] = React.useState(false)
+  // const [miniBtn, setMiniBtn] = React.useState(true)
+  // const [neverBtn, setNeverBtn] = React.useState(false)
   
-  const handleAlwaysBtn = () => {
-    setAlwaysBtn(true)
-    setMiniBtn(false)
-    setNeverBtn(false)
-  }
+  // const handleAlwaysBtn = () => {
+  //   setAlwaysBtn(true)
+  //   setMiniBtn(false)
+  //   setNeverBtn(false)
+  // }
 
-  const handleMiniBtn = () => {
-    setMiniBtn(true)
-    setAlwaysBtn(false)
-    setNeverBtn(false)
-  }
+  // const handleMiniBtn = () => {
+  //   setMiniBtn(true)
+  //   setAlwaysBtn(false)
+  //   setNeverBtn(false)
+  // }
 
-  const handleNeverBtn = () => {
-    setNeverBtn(true)
-    setAlwaysBtn(false)
-    setMiniBtn(false)
-  }
+  // const handleNeverBtn = () => {
+  //   setNeverBtn(true)
+  //   setAlwaysBtn(false)
+  //   setMiniBtn(false)
+  // }
 
   return (
     <div className={classes.root}>
