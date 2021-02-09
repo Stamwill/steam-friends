@@ -70,6 +70,29 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
     })
   }
 
+  const [alwaysBtn, setAlwaysBtn] = React.useState(false)
+  const [miniBtn, setMiniBtn] = React.useState(true)
+  const [neverBtn, setNeverBtn] = React.useState(false)
+  
+  const handleAlwaysBtn = () => {
+    setAlwaysBtn(true)
+    setMiniBtn(false)
+    setNeverBtn(false)
+  }
+
+  const handleMiniBtn = () => {
+    setMiniBtn(true)
+    setAlwaysBtn(false)
+    setNeverBtn(false)
+  }
+
+  const handleNeverBtn = () => {
+    setNeverBtn(true)
+    setAlwaysBtn(false)
+    setMiniBtn(false)
+  }
+
+
   return (
     <div className={classnames(classes.root, {[classes.open]: open} )} ref={ref}>
       <div className={classes.leftContainer}>
@@ -109,6 +132,12 @@ const SettingsPage = React.forwardRef(function SettingsPage(props, ref) {
 
           { pageIndex === 3 && <NotificationSettings 
             notificationOptions={notificationOptions}
+            alwaysBtn={alwaysBtn}
+            miniBtn={miniBtn}
+            neverBtn={neverBtn}
+            handleAlwaysBtn={handleAlwaysBtn}
+            handleMiniBtn={handleMiniBtn}
+            handleNeverBtn={handleNeverBtn}
           /> }
           
           { pageIndex === 4 && <VoiceSettings /> }
