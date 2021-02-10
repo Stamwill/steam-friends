@@ -6,7 +6,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import classes from './Search.module.css'
 
 const Search = React.forwardRef(function Search(props, ref) {
-  const {  className, handleSearch, ...other } = props
+  const {  className, handleSearch, hideGlass, ...other } = props
 
 
 
@@ -25,7 +25,7 @@ const Search = React.forwardRef(function Search(props, ref) {
           onChange={handleSearch}
         />
       </div>
-        <AiOutlineSearch className={classnames(classes.magnifying)} />
+        <AiOutlineSearch className={classnames(classes.magnifying, {[classes.hide]: hideGlass})} />
 
       <div className={classes.searchIcons}>
         <HiUserAdd className={classes.add}/>
