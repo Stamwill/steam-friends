@@ -30,18 +30,29 @@ function App() {
     }
   }
 
+  const [hideGlass, setHideGlass] = React.useState(false)
+
+  const handleHideGlass = () => {
+    if(filterText.length > 1) {
+      setHideGlass(true)
+    } else {
+      setHideGlass(false)
+    }
+  }
   const handleSearch = (e) => {
     setFilterText(e.target.value.toLowerCase())
+    handleHideGlass()
   }
 
   const handleToggleSettings = () => {
     setSettingsOpen((prevState) => !prevState)
   }
 
+
   return (
     <div className="App">
       <Topbar onToggleSettings={handleToggleSettings}/>
-      <Search handleSearch={handleSearch} />
+      <Search handleSearch={handleSearch} hideGlass={hideGlass}/>
 
       <SettingsPage 
         open={settingsOpen} 
