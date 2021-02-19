@@ -1,9 +1,11 @@
 class ApiClient { 
-  static baseURL = "/graphql/"
+  constructor() {
+    this.baseURL = "/graphql/"
+  }
 
   async request(query, variables = {}) {
+    console.log('baseURL: ', this.baseURL)
     let res = {}
-    
     try {
       const response = await fetch(this.baseURL, { 
         method: "POST",
@@ -16,7 +18,6 @@ class ApiClient {
         })      
       })
       res = await response.json()
-
     } catch(error) {
       console.log('API client request error: ' , error)
     }
