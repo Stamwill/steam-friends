@@ -9,16 +9,24 @@ import OnlineList from './blocks/OnlineList'
 import OfflineList from './blocks/OfflineList'
 
 
-
 function App() {
-
+  
+  const [ friends, setFriends ] = React.useState([])
+  
   const [settingsOpen, setSettingsOpen] = React.useState(false)
-
+  
   const [filterText, setFilterText] = React.useState("");
+  
+  React.useEffect(() => {
+    client.getFriends()
+    .then((data) => {
+      setFriends(data.friends)
+    })
+  }, [])
 
-  const filteredFriends = api.friends.filter(
-    friends =>
-      friends.userName.toLowerCase().includes(filterText) 
+  const filteredFriends = friends.filter(
+    friendsList =>
+      friendsList.userName.toLowerCase().includes(filterText) 
   );
 
   const onlineStatuses = ["Online", "Away", "Busy"]
@@ -77,6 +85,7 @@ function App() {
       <h2 className={classes.offlineFriends}>Offline Friends</h2>
 
       <OfflineList offlines={offlineFriends} />
+      
     </div>
   )
 }
