@@ -1,1 +1,1 @@
-export { default } from './NotificationsOptionsContainer'
+export { default } from './NotificationsSettingsContainer'
