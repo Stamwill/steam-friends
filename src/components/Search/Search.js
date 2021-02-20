@@ -38,7 +38,7 @@ Search.propTypes = {
   className: PropTypes.string,
   handleSearch: PropTypes.func,
   handleGlass: PropTypes.func,
-  showGlass: PropTypes.bool,
+  hideGlass: PropTypes.bool,
 }
 
 Search.uiName = 'Search'
