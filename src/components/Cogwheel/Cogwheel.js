@@ -6,7 +6,7 @@ import classes from './Cogwheel.module.css'
 const Cogwheel = React.forwardRef(function Cogwheel(props, ref) {
   const { handleSettings } = props
   return (
-    <div className={classes.cogWheel}>
+    <div className={classes.cogWheel} ref={ref}>
       <FaCog className={classes.cogWheel} onClick={handleSettings}/>
     </div>
   )
