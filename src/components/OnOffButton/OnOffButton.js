@@ -17,8 +17,6 @@ const OnOffButton = React.forwardRef(function OnOffButton(props, ref) {
 
 OnOffButton.propTypes = {
   isOn: PropTypes.bool,
-  isOff: PropTypes.bool,
-  handleClick: PropTypes.func,
 }
 
 export default OnOffButton
