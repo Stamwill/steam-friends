@@ -85,7 +85,6 @@ function App() {
       <h2 className={classes.offlineFriends}>Offline Friends</h2>
 
       <OfflineList offlines={offlineFriends} />
-      
     </div>
   )
 }
