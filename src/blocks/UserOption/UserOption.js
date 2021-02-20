@@ -7,7 +7,7 @@ const UserOption = React.forwardRef(function userOption(props, ref) {
   const { open, ...other } = props
 
   return (
-    <div className={classnames(classes.root, { [ classes.open ]: open})} {...other}>
+    <div className={classnames(classes.root, { [ classes.open ]: open})} ref={ref} {...other}>
       <div className={classes.optionContainer}>
         <h4 className={classes.option}><span className={classes.online}>Online</span></h4>
         <h4 className={classes.option}>Away</h4>
