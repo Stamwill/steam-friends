@@ -22,6 +22,8 @@ const FriendOptionsContainer = React.forwardRef(function FriendOptionsContainer(
 
 FriendOptionsContainer.propTypes = {
   friendOptions: PropTypes.object,
+  isOn: PropTypes.bool,
+  handleClick: PropTypes.func
 }
 
 export default FriendOptionsContainer
